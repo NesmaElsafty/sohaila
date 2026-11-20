@@ -1,47 +1,40 @@
-# QA Report — Sohaila Halim Website
+# QA Report — Sohaila Halim Website (Post-Refinement)
 
-Date: 2026-11-20
+Date: 2026-11-20  
+Companion: `docs/refinement-report.md`
 
-## Completion checklist
+## Acceptance checklist
 
-| Criterion | Status |
-|---|---|
-| Seven HTML pages exist | Pass |
-| PDF content inventoried & mapped | Pass (see content-inventory / content-mapping) |
-| English source text preserved | Pass |
-| Hero image used unchanged | Pass |
-| Original client/result/testimonial images used | Pass |
-| Uncertain logo names flagged (not invented) | Pass / documented |
-| EN interface | Pass |
-| AR UI + RTL | Pass (body AR pending approval) |
-| Tabs / accordion | Pass |
-| Portfolio filters | Pass |
-| Results + testimonial lightbox | Pass |
-| Contact mailto / tel / LinkedIn | Pass |
-| Sticky nav + mobile menu | Pass |
-| No fictional testimonials/stats/clients added | Pass |
+| Criterion | Status | Evidence |
+|---|---|---|
+| All seven pages work | PASS | HTTP 200 on all pages via local server |
+| Original content preserved | PASS | Source HTML + data files; no content deletion |
+| Original images unchanged | PASS | Hero/logos/clients/results/testimonials paths intact |
+| Hero displays correctly | PASS | Browser screenshot; `object-fit: contain`; no extra mask |
+| Navigation works | PASS | Desktop + mobile toggle; Escape close; inert when closed |
+| EN/AR interface works | PASS | CDP + browser: AR labels, RTL, persistence |
+| RTL correct; images not mirrored | PASS | `dir=rtl`; source regions `lang=en dir=ltr` |
+| Lightbox accessible | PASS | Native dialog; AR prev/next/close; focus on close |
+| Portfolio filters work | PASS | Filter bar + re-init after dynamic render |
+| Testimonials Load More | PASS | `عرض 6 من 52` at 390px; button present |
+| Tabs / accordions | PASS | Expertise tabs + accordion states in snapshot |
+| Deep links | PASS | `expertise.html#expertise-brand` selects correct tab |
+| Tables readable on mobile | PASS | Scroll regions + scroll hint CSS |
+| No critical console init errors for lightbox | PASS | `initAll` alias exists |
+| Broken asset paths | PASS (spot) | Hero/CSS/JS/portfolio assets 200 |
+| Arabic body translation complete | FAIL / PENDING | Explicitly pending approval |
+| Full 6×2 viewport screenshot matrix | PARTIAL | 390 + desktop evidenced; others NOT fully screenshot-tested |
+| Automated axe/Lighthouse | NOT TESTED | — |
 
-## Outstanding / incomplete (disclosed)
+## Content audit snapshot
 
-1. **Approved Arabic body translations** not supplied — English fallback for page copy in AR mode.
-2. **Logo-only names** for some government/startup/healthcare marks need manual confirmation.
-3. **Deployment domain** unknown — canonical URLs / sitemap absolute URLs pending.
-4. **Contact form backend** not provided — form marked unavailable; direct channels work.
-5. **Original brand fonts** not identified — temporary fallbacks: Barlow Condensed + DM Sans + Noto Sans Arabic (documented).
-6. Working folders `_pdf_extract`, `_pdf_pages`, `_extract*` retained for audit; can be excluded from production deploy.
+Manifest items: 184  
+Uncertain names: 10  
+Missing assets in manifest generation: 0 (`asset-present`: 78)
 
-## Testing performed
+## Remaining production blockers (truthful)
 
-- PDF text extraction (26 pages) via PyMuPDF
-- Hyperlink extraction (Instagram + LinkedIn) and cleaning of tracking params
-- Asset extraction and category mapping
-- Static file presence check for all seven pages + CSS/JS/data
-- Manual structure review against master prompt sitemap
-
-## Recommended next QA (browser)
-
-- [ ] Visual check 360 / 390 / 768 / 1024 / 1440 / 1920
-- [ ] Keyboard tab order + Escape on lightbox/menu
-- [ ] EN↔AR switch persistence across pages
-- [ ] Portfolio filter empty-state path
-- [ ] Lighthouse accessibility spot-check
+1. Approved Arabic portfolio body copy not supplied.
+2. Uncertain logo-only client names need manual confirmation.
+3. Contact form backend not integrated.
+4. Complete multi-viewport visual sign-off still recommended before launch.

@@ -1,20 +1,28 @@
 (function () {
   const PAGES = [
-    { href: "index.html", key: "home" },
-    { href: "about.html", key: "about" },
-    { href: "expertise.html", key: "expertise" },
-    { href: "portfolio.html", key: "portfolio" },
-    { href: "results.html", key: "results" },
-    { href: "testimonials.html", key: "testimonials" },
-    { href: "contact.html", key: "contact" },
+    { href: "index.html", key: "home", label: "Home" },
+    { href: "about.html", key: "about", label: "About" },
+    { href: "expertise.html", key: "expertise", label: "Expertise" },
+    { href: "portfolio.html", key: "portfolio", label: "Portfolio" },
+    { href: "results.html", key: "results", label: "Results" },
+    { href: "testimonials.html", key: "testimonials", label: "Testimonials" },
+    { href: "contact.html", key: "contact", label: "Contact" },
   ];
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
 
   function renderHeader() {
     const mount = document.querySelector("[data-site-header]");
     if (!mount) return;
     const navItems = PAGES.map(
       (p) =>
-        `<li><a class="site-nav__link" href="${p.href}" data-i18n="nav.${p.key}">${p.key}</a></li>`
+        `<li><a class="site-nav__link" href="${p.href}" data-i18n="nav.${p.key}">${escapeHtml(p.label)}</a></li>`
     ).join("");
 
     mount.innerHTML = `
@@ -30,7 +38,7 @@
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="nav.openMenu" aria-label="Open menu">
             <span></span><span></span><span></span>
           </button>
-          <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <nav class="site-nav" id="primary-nav" data-nav-label aria-label="Primary">
             <ul class="site-nav__list">${navItems}</ul>
             <div class="lang-switcher" role="group" aria-label="Language">
               <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -46,7 +54,7 @@
     const mount = document.querySelector("[data-site-footer]");
     if (!mount) return;
     const links = PAGES.map(
-      (p) => `<li><a href="${p.href}" data-i18n="nav.${p.key}">${p.key}</a></li>`
+      (p) => `<li><a href="${p.href}" data-i18n="nav.${p.key}">${escapeHtml(p.label)}</a></li>`
     ).join("");
 
     mount.innerHTML = `
@@ -84,11 +92,38 @@
       </footer>`;
   }
 
+  function injectTranslationBanner() {
+    if (document.querySelector(".translation-banner")) return;
+    const main = document.getElementById("main");
+    if (!main) return;
+    const banner = document.createElement("div");
+    banner.className = "translation-banner";
+    banner.setAttribute("role", "status");
+    banner.hidden = true;
+    banner.setAttribute("aria-hidden", "true");
+    banner.innerHTML = `<p data-i18n="common.translationPending">Arabic translation pending approval. English source text is shown.</p>`;
+    main.insertBefore(banner, main.firstChild);
+
+    function sync() {
+      const lang = window.SohailaI18n ? window.SohailaI18n.getStoredLang() : "en";
+      const show = lang === "ar";
+      banner.hidden = !show;
+      banner.setAttribute("aria-hidden", show ? "false" : "true");
+      if (show && window.SohailaI18n) {
+        const p = banner.querySelector("[data-i18n]");
+        if (p) p.textContent = window.SohailaI18n.t("common.translationPending");
+      }
+    }
+    document.addEventListener("sohaila:langchange", sync);
+    sync();
+  }
+
   function boot() {
     renderHeader();
     renderFooter();
     if (window.SohailaI18n) window.SohailaI18n.init();
     if (window.SohailaNav) window.SohailaNav.init();
+    injectTranslationBanner();
   }
 
   if (document.readyState === "loading") {

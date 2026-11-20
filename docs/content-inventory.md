@@ -2,7 +2,10 @@
 
 Source of truth: `Suhaila Portfolio 7-11-2026.pdf` (26 pages).
 
-Status legend: `implemented` | `pending-translation` | `flagged-review`
+**Machine-readable granular inventory:** `assets/data/content-manifest.json`  
+(184 items after refinement pass — includes clients, metrics, screenshots, contacts, with selectors + verificationStatus.)
+
+Status legend: `implemented` | `pending-translation` | `flagged-review` | `uncertain-name`
 
 ## Page 1 — Home hero source
 

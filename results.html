@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Studies &amp; Results — Sohaila Halim</title>
   <meta name="description" content="Selected success stories, medical clinic growth, e-commerce results, and original results evidence screenshots." />
+  <meta property="og:title" content="Case Studies &amp; Results — Sohaila Halim" />
+  <meta property="og:image" content="assets/images/hero/sohaila-hero.png" />
   <link rel="icon" href="assets/images/brand/logo-dark.png" />
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
@@ -18,7 +20,7 @@
 
   <main id="main" class="site-main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container" data-source-content>
         <p class="section__eyebrow">Results</p>
         <h1 class="page-hero__title">Case Studies &amp; Results</h1>
         <p class="section__lead">Selected Success Stories</p>
@@ -31,11 +33,12 @@
       </div>
     </section>
 
-    <section class="section" id="high-ticket" aria-labelledby="ht-title">
-      <div class="container">
+    <section class="section section--tight" id="high-ticket" aria-labelledby="ht-title">
+      <div class="container" data-source-content>
         <h2 id="ht-title" class="section__title section__title--fuchsia">High-Ticket Business Scaling — Success Stories</h2>
         <p class="section__desc">Low-Ticket Funnels · Paid Acquisition · High-Ticket Offers</p>
-        <div class="table-wrap" style="margin-top:1.5rem">
+        <p class="table-scroll-hint" data-i18n="common.scrollHint">Scroll horizontally to view the full table</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="ht-title">
           <table class="data-table">
             <thead>
               <tr>
@@ -57,11 +60,12 @@
       </div>
     </section>
 
-    <section class="section section--blush" id="medical" aria-labelledby="med-title">
-      <div class="container">
+    <section class="section section--blush section--tight" id="medical" aria-labelledby="med-title">
+      <div class="container" data-source-content>
         <h2 id="med-title" class="section__title section__title--fuchsia">Medical Personal Branding &amp; Clinic Growth</h2>
         <p class="section__desc">Patient Acquisition · Clinic Bookings · Social Media Conversion</p>
-        <div class="table-wrap" style="margin-top:1.5rem">
+        <p class="table-scroll-hint" data-i18n="common.scrollHint">Scroll horizontally to view the full table</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="med-title">
           <table class="data-table">
             <thead>
               <tr>
@@ -82,11 +86,12 @@
       </div>
     </section>
 
-    <section class="section" id="ecommerce" aria-labelledby="ecom-title">
-      <div class="container">
+    <section class="section section--tight" id="ecommerce" aria-labelledby="ecom-title">
+      <div class="container" data-source-content>
         <h2 id="ecom-title" class="section__title section__title--fuchsia">E-commerce &amp; Consumer Brand Growth</h2>
         <p class="section__desc">Online Revenue · Monthly Orders · Return on Ad Spend</p>
-        <div class="table-wrap" style="margin-top:1.5rem">
+        <p class="table-scroll-hint" data-i18n="common.scrollHint">Scroll horizontally to view the full table</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="ecom-title">
           <table class="data-table">
             <thead>
               <tr>
@@ -108,11 +113,13 @@
       </div>
     </section>
 
-    <section class="section section--blush" id="evidence" aria-labelledby="ev-title">
+    <section class="section section--blush section--tight" id="evidence" aria-labelledby="ev-title">
       <div class="container container--wide">
-        <h2 id="ev-title" class="section__title section__title--fuchsia">Results Evidence Gallery</h2>
-        <p class="section__desc">Original results screenshots from the portfolio (pages 16–18). Click to enlarge.</p>
-        <div class="gallery-grid" id="results-gallery" data-lightbox-gallery style="margin-top:2rem"></div>
+        <div data-source-content>
+          <h2 id="ev-title" class="section__title section__title--fuchsia">Results Evidence Gallery</h2>
+          <p class="section__desc">Original results screenshots from the portfolio (pages 16–18). Click to enlarge.</p>
+        </div>
+        <div class="gallery-grid" id="results-gallery" data-lightbox-gallery style="margin-top:1.5rem"></div>
       </div>
     </section>
   </main>
@@ -126,17 +133,41 @@
   <script src="assets/js/main.js"></script>
   <script>
     (function () {
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
       const mount = document.getElementById("results-gallery");
       if (!mount || !window.SOHAILA_RESULTS) return;
-      mount.innerHTML = window.SOHAILA_RESULTS.evidence.map((item) => `
-        <article class="gallery-item">
-          <button type="button" data-lightbox-item data-full="${item.src}" data-caption="${item.caption}">
-            <div class="gallery-item__media">
-              <img src="${item.src}" alt="${item.alt}" loading="lazy" width="400" height="300" />
-            </div>
-            <p class="gallery-item__caption">${item.caption}</p>
-          </button>
-        </article>`).join("");
+
+      mount.innerHTML = window.SOHAILA_RESULTS.evidence
+        .map(function (item) {
+          return (
+            '<article class="gallery-item">' +
+            '<button type="button" data-lightbox-item data-full="' +
+            escapeHtml(item.src) +
+            '" data-caption="' +
+            escapeHtml(item.caption) +
+            '">' +
+            '<div class="gallery-item__media">' +
+            '<img src="' +
+            escapeHtml(item.src) +
+            '" alt="' +
+            escapeHtml(item.alt) +
+            '" loading="lazy" width="400" height="300" />' +
+            "</div>" +
+            '<p class="gallery-item__caption">' +
+            escapeHtml(item.caption) +
+            "</p>" +
+            "</button></article>"
+          );
+        })
+        .join("");
+
       if (window.SohailaLightbox) window.SohailaLightbox.initAll();
     })();
   </script>

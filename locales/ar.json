@@ -9,7 +9,8 @@
     "contact": "تواصل",
     "cta": "لنتحدث",
     "openMenu": "فتح القائمة",
-    "closeMenu": "إغلاق القائمة"
+    "closeMenu": "إغلاق القائمة",
+    "primary": "القائمة الرئيسية"
   },
   "common": {
     "exploreExpertise": "استكشف الخبرات",
@@ -25,12 +26,27 @@
     "next": "التالي",
     "emptyFilter": "لا توجد عناصر مطابقة لهذا التصفية.",
     "formUnavailable": "تكامل نموذج التواصل قيد الإعداد. يُرجى التواصل عبر البريد أو الهاتف.",
-    "skipToContent": "تخطّ إلى المحتوى"
+    "skipToContent": "تخطّ إلى المحتوى",
+    "loadMore": "عرض المزيد",
+    "showingCount": "عرض {shown} من {total}",
+    "galleryPosition": "صورة {current} من {total}",
+    "scrollHint": "مرّر أفقياً لعرض الجدول بالكامل",
+    "translationPending": "الترجمة العربية قيد الاعتماد. يُعرض النص الإنجليزي الأصلي."
   },
   "footer": {
     "explore": "استكشف",
     "contact": "تواصل",
     "language": "اللغة"
   },
-  "_note": "Arabic interface strings only. Full Arabic translation of portfolio body copy is PENDING APPROVAL. English source text is used as fallback in page content."
+  "portfolio": {
+    "all": "كل العملاء",
+    "personal": "العلامات الشخصية والأعمال عالية القيمة",
+    "corporate": "العلامات المؤسسية",
+    "care-beauty": "علامات العناية والجمال",
+    "healthcare": "الرعاية الصحية والمؤسسات الطبية",
+    "real-estate": "العقارات والإنشاءات والخدمات الهندسية",
+    "government": "الجهات الحكومية والمنصات الرقمية",
+    "startups": "الشركات الناشئة"
+  },
+  "_note": "Arabic interface strings only. Full Arabic portfolio body translation PENDING APPROVAL."
 }

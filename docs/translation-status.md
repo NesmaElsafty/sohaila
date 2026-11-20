@@ -1,29 +1,38 @@
-# Translation Status
+# Translation Status (Post-Refinement)
 
 ## Policy
 
-- English portfolio body copy is the approved source and is preserved **verbatim** in HTML.
-- Arabic **interface** strings (nav, buttons, filters, accessibility labels, empty states) are implemented.
-- Full Arabic translation of portfolio body copy was **not supplied** as approved content.
-- Therefore Arabic mode currently uses English body text as a documented temporary fallback (per project rules). Do not treat body Arabic as complete or approved.
+- English portfolio body copy is the approved source and remains verbatim in HTML.
+- Regions with `data-source-content` receive `lang="en"` + `dir="ltr"` even when the document is RTL.
+- Arabic **interface** strings are implemented for chrome and interactive controls.
+- Full Arabic body translation was **not** supplied as approved content and is **not** fabricated.
 
-## Coverage
+## Interface coverage (implemented)
 
-| Layer | EN | AR |
+| Surface | EN | AR |
 |---|---|---|
-| Navigation / chrome | Complete | Complete (UI) |
-| Buttons / filters / lightbox labels | Complete | Complete (UI) |
-| Hero / about / expertise / results body copy | Complete (source) | Pending approval |
-| Portfolio client names/titles | Complete (source) | Pending (some titles already Arabic in source) |
-| Testimonials | Screenshots only | Screenshots only |
-| Contact details | Complete | Complete (same data) |
+| Primary nav + CTA | Yes | Yes |
+| Mobile open/close menu labels | Yes | Yes |
+| Language switcher group label | Yes | Yes |
+| Skip link / back to top | Yes | Yes |
+| Portfolio filters | Yes | Yes |
+| Empty filter state | Yes | Yes |
+| Lightbox prev/next/close/position | Yes | Yes |
+| Load more + showing count | Yes | Yes |
+| Table scroll hint | Yes | Yes |
+| Translation-pending banner | Yes | Yes (visible only in AR) |
+| Contact form unavailable note | Yes | Yes |
 
-## Files
+## Body content
 
-- Runtime: `assets/js/translations.js`
-- Mirror JSON: `locales/en.json`, `locales/ar.json`
+| Content | Status |
+|---|---|
+| About / expertise / results tables / contact copy | English source; AR pending |
+| Client names/titles | Source (some titles already Arabic in PDF) |
+| Testimonials | Screenshots only |
 
-## RTL
+## Runtime files
 
-When AR is selected: `lang="ar"`, `dir="rtl"`, mirrored layout rules in `assets/css/rtl.css`.  
-Photographs, logos, charts, and screenshots are **not** mirrored.
+- `assets/js/translations.js`
+- `locales/en.json`
+- `locales/ar.json`

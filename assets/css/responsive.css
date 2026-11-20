@@ -1,15 +1,23 @@
 @media (max-width: 1024px) {
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-5);
   }
 
   .hero__media {
     order: -1;
+    justify-items: center;
   }
 
   .hero__media img {
-    width: min(100%, 22rem);
+    width: min(100%, 20rem);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero__content {
+    text-align: start;
   }
 
   .tabs--vertical {
@@ -44,24 +52,50 @@
 
   .site-nav {
     position: fixed;
-    inset: var(--header-h) 0 0 0;
+    top: var(--header-h);
+    bottom: 0;
+    inset-inline-start: 0;
+    width: min(100%, 24rem);
+    max-width: 100%;
     background: var(--color-white);
     flex-direction: column;
     align-items: stretch;
     padding: var(--space-5);
     gap: var(--space-4);
-    transform: translateX(100%);
-    transition: transform var(--duration) var(--ease);
+    transform: translate3d(100%, 0, 0);
+    transition: transform var(--duration) var(--ease), visibility var(--duration) var(--ease);
+    overflow-x: hidden;
     overflow-y: auto;
     border-top: 1px solid var(--color-border);
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 90;
+    /* Keep closed drawer from expanding document scroll width */
+    clip-path: inset(0 0 0 0);
   }
 
   [dir="rtl"] .site-nav {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 
   .site-header.is-open .site-nav {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    pointer-events: auto;
+    clip-path: none;
+  }
+
+  .site-header:not(.is-open) .site-nav {
+    /* Park fully outside without expanding layout overflow */
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  [dir="rtl"] .site-header:not(.is-open) .site-nav {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    transform: translate3d(-100%, 0, 0);
   }
 
   .site-nav__list {
@@ -84,8 +118,12 @@
 }
 
 @media (max-width: 768px) {
+  .table-scroll-hint {
+    display: block;
+  }
+
   .section {
-    padding-block: var(--space-7);
+    padding-block: clamp(2rem, 5vw, 3rem);
   }
 
   .grid--2,

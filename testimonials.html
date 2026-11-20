@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Testimonials — Sohaila Halim</title>
   <meta name="description" content="Original client testimonial screenshots from Sohaila Halim's portfolio." />
+  <meta property="og:title" content="Testimonials — Sohaila Halim" />
+  <meta property="og:image" content="assets/images/hero/sohaila-hero.png" />
   <link rel="icon" href="assets/images/brand/logo-dark.png" />
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
@@ -21,13 +23,19 @@
       <div class="container">
         <p class="section__eyebrow">Testimonials</p>
         <h1 class="page-hero__title">Testimonials</h1>
-        <p class="section__desc">Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.</p>
+        <div data-source-content>
+          <p class="section__desc">Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section section--blush">
-      <div class="container container--wide">
-        <div class="gallery-grid" id="testimonials-gallery" data-lightbox-gallery></div>
+    <section class="section section--blush section--tight">
+      <div class="container container--wide" data-load-more>
+        <div class="gallery-grid" id="testimonials-gallery" data-lightbox-gallery data-load-more-gallery></div>
+        <div class="load-more">
+          <p class="load-more__status" data-load-more-status aria-live="polite"></p>
+          <button type="button" class="btn btn--primary" data-load-more-btn data-i18n="common.loadMore">Load more</button>
+        </div>
       </div>
     </section>
   </main>
@@ -38,20 +46,48 @@
   <script src="assets/js/navigation.js"></script>
   <script src="assets/data/testimonials.js"></script>
   <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/load-more.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     (function () {
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
       const mount = document.getElementById("testimonials-gallery");
       if (!mount || !window.SOHAILA_TESTIMONIALS) return;
-      mount.innerHTML = window.SOHAILA_TESTIMONIALS.map((item) => `
-        <article class="gallery-item">
-          <button type="button" data-lightbox-item data-full="${item.src}" data-caption="${item.caption}">
-            <div class="gallery-item__media" style="aspect-ratio:4/5">
-              <img src="${item.src}" alt="${item.alt}" loading="lazy" width="320" height="400" />
-            </div>
-            <p class="gallery-item__caption">${item.caption}</p>
-          </button>
-        </article>`).join("");
+
+      const frag = document.createDocumentFragment();
+      window.SOHAILA_TESTIMONIALS.forEach((item) => {
+        const article = document.createElement("article");
+        article.className = "gallery-item";
+        article.setAttribute("data-load-more-item", "");
+        article.innerHTML =
+          '<button type="button" data-lightbox-item data-full="' +
+          escapeHtml(item.src) +
+          '" data-caption="' +
+          escapeHtml(item.caption) +
+          '">' +
+          '<div class="gallery-item__media" style="aspect-ratio:4/5">' +
+          '<img src="' +
+          escapeHtml(item.src) +
+          '" alt="' +
+          escapeHtml(item.alt) +
+          '" loading="lazy" width="320" height="400" />' +
+          "</div>" +
+          '<p class="gallery-item__caption">' +
+          escapeHtml(item.caption) +
+          "</p>" +
+          "</button>";
+        frag.appendChild(article);
+      });
+      mount.appendChild(frag);
+
+      if (window.SohailaLoadMore) window.SohailaLoadMore.initAll();
     })();
   </script>
 </body>

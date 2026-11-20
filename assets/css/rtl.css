@@ -2,6 +2,15 @@
   font-family: var(--font-arabic), var(--font-body);
 }
 
+[dir="rtl"] [data-source-content],
+[dir="rtl"] [data-source-content] * {
+  /* Keep English source copy readable; do not force Arabic font on Latin text */
+}
+
+[dir="rtl"] .lightbox__toolbar {
+  text-align: start;
+}
+
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,

@@ -1,8 +1,7 @@
 /**
  * Interface strings only.
- * Source portfolio English content remains verbatim in HTML.
- * Arabic interface strings provided for navigation/UI.
- * Arabic body content: pending approval — English fallback documented in docs/translation-status.md
+ * Source portfolio English body copy remains verbatim in HTML (data-source-content).
+ * Arabic body translations: pending approval — see docs/translation-status.md
  */
 window.SOHAILA_I18N = {
   en: {
@@ -17,6 +16,7 @@ window.SOHAILA_I18N = {
       cta: "Let's Talk",
       openMenu: "Open menu",
       closeMenu: "Close menu",
+      primary: "Primary",
     },
     common: {
       exploreExpertise: "Explore Expertise",
@@ -33,11 +33,26 @@ window.SOHAILA_I18N = {
       emptyFilter: "No items match this filter.",
       formUnavailable: "Contact form integration is pending. Please use email or phone to reach out.",
       skipToContent: "Skip to content",
+      loadMore: "Load more",
+      showingCount: "Showing {shown} of {total}",
+      galleryPosition: "Image {current} of {total}",
+      scrollHint: "Scroll horizontally to view the full table",
+      translationPending: "Arabic translation pending approval. English source text is shown.",
     },
     footer: {
       explore: "Explore",
       contact: "Contact",
       language: "Language",
+    },
+    portfolio: {
+      all: "All Clients",
+      personal: "Personal Brands & High-Ticket Businesses",
+      corporate: "Corporate Brands",
+      "care-beauty": "Care & Beauty Brands",
+      healthcare: "Healthcare & Medical Institutions",
+      "real-estate": "Real Estate, Construction & Engineering Services",
+      government: "Government Entities & Digital Platforms",
+      startups: "Startups",
     },
   },
   ar: {
@@ -52,6 +67,7 @@ window.SOHAILA_I18N = {
       cta: "لنتحدث",
       openMenu: "فتح القائمة",
       closeMenu: "إغلاق القائمة",
+      primary: "القائمة الرئيسية",
     },
     common: {
       exploreExpertise: "استكشف الخبرات",
@@ -68,11 +84,26 @@ window.SOHAILA_I18N = {
       emptyFilter: "لا توجد عناصر مطابقة لهذا التصفية.",
       formUnavailable: "تكامل نموذج التواصل قيد الإعداد. يُرجى التواصل عبر البريد أو الهاتف.",
       skipToContent: "تخطّ إلى المحتوى",
+      loadMore: "عرض المزيد",
+      showingCount: "عرض {shown} من {total}",
+      galleryPosition: "صورة {current} من {total}",
+      scrollHint: "مرّر أفقياً لعرض الجدول بالكامل",
+      translationPending: "الترجمة العربية قيد الاعتماد. يُعرض النص الإنجليزي الأصلي.",
     },
     footer: {
       explore: "استكشف",
       contact: "تواصل",
       language: "اللغة",
+    },
+    portfolio: {
+      all: "كل العملاء",
+      personal: "العلامات الشخصية والأعمال عالية القيمة",
+      corporate: "العلامات المؤسسية",
+      "care-beauty": "علامات العناية والجمال",
+      healthcare: "الرعاية الصحية والمؤسسات الطبية",
+      "real-estate": "العقارات والإنشاءات والخدمات الهندسية",
+      government: "الجهات الحكومية والمنصات الرقمية",
+      startups: "الشركات الناشئة",
     },
   },
 };

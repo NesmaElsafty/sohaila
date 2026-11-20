@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 1rem);
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -119,11 +120,38 @@ ul, ol {
 
 .section {
   position: relative;
-  padding-block: var(--space-8);
+  padding-block: clamp(2.5rem, 4vw, 4rem);
 }
 
 .section--tight {
-  padding-block: var(--space-6);
+  padding-block: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.translation-banner {
+  background: var(--color-blush);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.65rem var(--container-pad);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-charcoal-muted);
+}
+
+.translation-banner[hidden] {
+  display: none;
+}
+
+.translation-banner p {
+  margin: 0;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+[data-source-content] {
+  /* English source remains LTR-readable inside RTL chrome */
+}
+
+body.lightbox-open {
+  overflow: hidden;
 }
 
 .section--blush {
@@ -212,7 +240,7 @@ ul, ol {
 }
 
 .page-hero {
-  padding-block: calc(var(--header-h) + var(--space-7)) var(--space-7);
+  padding-block: calc(var(--header-h) + var(--space-5)) clamp(1.75rem, 3vw, 2.75rem);
   background:
     radial-gradient(ellipse 60% 50% at 90% 20%, var(--color-blush) 0%, transparent 70%),
     var(--color-white);

@@ -9,7 +9,8 @@
     "contact": "Contact",
     "cta": "Let's Talk",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "primary": "Primary"
   },
   "common": {
     "exploreExpertise": "Explore Expertise",
@@ -25,12 +26,27 @@
     "next": "Next",
     "emptyFilter": "No items match this filter.",
     "formUnavailable": "Contact form integration is pending. Please use email or phone to reach out.",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "loadMore": "Load more",
+    "showingCount": "Showing {shown} of {total}",
+    "galleryPosition": "Image {current} of {total}",
+    "scrollHint": "Scroll horizontally to view the full table",
+    "translationPending": "Arabic translation pending approval. English source text is shown."
   },
   "footer": {
     "explore": "Explore",
     "contact": "Contact",
     "language": "Language"
   },
-  "_note": "Source portfolio body copy remains verbatim in HTML. This file covers interface strings only."
+  "portfolio": {
+    "all": "All Clients",
+    "personal": "Personal Brands & High-Ticket Businesses",
+    "corporate": "Corporate Brands",
+    "care-beauty": "Care & Beauty Brands",
+    "healthcare": "Healthcare & Medical Institutions",
+    "real-estate": "Real Estate, Construction & Engineering Services",
+    "government": "Government Entities & Digital Platforms",
+    "startups": "Startups"
+  },
+  "_note": "Interface strings only. Portfolio body copy remains English source until approved Arabic content is supplied."
 }

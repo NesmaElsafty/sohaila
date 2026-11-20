@@ -51,6 +51,11 @@ Typography uses temporary fallbacks (Barlow Condensed, DM Sans, Noto Sans Arabic
 - Switcher stores preference in `localStorage` (`sohaila-lang`)
 - UI strings: `assets/js/translations.js` + `locales/*.json`
 - Arabic body copy: pending approval — see `docs/translation-status.md`
+- Source English regions use `data-source-content` (`lang="en"` / `dir="ltr"` under RTL)
+
+## Refinement notes
+
+See `docs/refinement-report.md` for the production QA pass covering i18n, mobile nav, lightbox a11y, testimonials Load More, overflow fixes, and testing evidence.
 
 ## Documentation
 
