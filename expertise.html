@@ -11,9 +11,15 @@
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body id="top">
-  <a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+    <div id="page-loader" class="page-transition is-active is-booting" aria-hidden="true" aria-busy="true">
+    <div class="page-transition__veil"></div>
+    <div class="page-transition__logo-wrap"></div>
+  </div>
+  <script src="assets/js/page-transition.js"></script>
+<a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
   <div data-site-header></div>
 
   <main id="main" class="site-main">
@@ -271,10 +277,12 @@
 
   <div data-site-footer></div>
   <script src="assets/js/translations.js"></script>
+  <script src="assets/js/page-content.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/animations.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

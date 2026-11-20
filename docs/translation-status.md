@@ -1,38 +1,34 @@
-# Translation Status (Post-Refinement)
+# Translation Status
 
 ## Policy
 
-- English portfolio body copy is the approved source and remains verbatim in HTML.
-- Regions with `data-source-content` receive `lang="en"` + `dir="ltr"` even when the document is RTL.
-- Arabic **interface** strings are implemented for chrome and interactive controls.
-- Full Arabic body translation was **not** supplied as approved content and is **not** fabricated.
+- English portfolio body copy remains the HTML source (default language).
+- Arabic is a **full meaning-equivalent translation** of the same site content (UI + body).
+- Proper nouns, client/brand names, emails, phones, and metrics stay in their source form where appropriate (e.g. Sohaila Halim, ROAS, EGP, Facebook).
+- Testimonial **screenshot images** are unchanged (no invented transcripts).
 
-## Interface coverage (implemented)
+## Coverage
 
-| Surface | EN | AR |
+| Layer | EN | AR |
 |---|---|---|
-| Primary nav + CTA | Yes | Yes |
-| Mobile open/close menu labels | Yes | Yes |
-| Language switcher group label | Yes | Yes |
-| Skip link / back to top | Yes | Yes |
-| Portfolio filters | Yes | Yes |
-| Empty filter state | Yes | Yes |
-| Lightbox prev/next/close/position | Yes | Yes |
-| Load more + showing count | Yes | Yes |
-| Table scroll hint | Yes | Yes |
-| Translation-pending banner | Yes | Yes (visible only in AR) |
-| Contact form unavailable note | Yes | Yes |
+| Primary nav + CTA + chrome | Yes | Yes |
+| Home / About / Expertise / Portfolio / Results / Testimonials / Contact body | Yes | Yes |
+| Portfolio filters + category/role meta | Yes | Yes |
+| Results table headers + section copy | Yes | Yes |
+| Gallery captions (Results / Testimonials patterns) | Yes | Yes |
+| Document title + meta description | Yes | Yes |
 
-## Body content
+## Runtime
 
-| Content | Status |
+| File | Role |
 |---|---|
-| About / expertise / results tables / contact copy | English source; AR pending |
-| Client names/titles | Source (some titles already Arabic in PDF) |
-| Testimonials | Screenshots only |
+| `assets/js/translations.js` | Chrome / interface strings |
+| `assets/js/page-content.js` | Full page body EN + AR dictionaries |
+| `assets/js/i18n.js` | Language switch, RTL, body text mapping |
+| `locales/en.json` / `locales/ar.json` | Mirror of chrome strings |
 
-## Runtime files
+## Notes
 
-- `assets/js/translations.js`
-- `locales/en.json`
-- `locales/ar.json`
+- Language preference is stored in `localStorage` (`sohaila-lang`).
+- Switching EN ↔ AR restores original English from remembered source text attributes.
+- The old “Arabic translation pending” banner has been removed.

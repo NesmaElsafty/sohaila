@@ -72,6 +72,18 @@
   --duration: 280ms;
   --duration-slow: 480ms;
 
+  /* Motion design system tokens */
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-fast: 180ms;
+  --motion-medium: 360ms;
+  --motion-reveal: 600ms;
+  --motion-transition: 450ms;
+  --motion-stagger: 75ms;
+  --motion-reveal-distance: 22px;
+  --motion-hover-lift: -6px;
+  --motion-hover-scale: 1.015;
+
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(32, 32, 32, 0.06);
   --shadow-md: 0 8px 24px rgba(32, 32, 32, 0.08);
@@ -86,5 +98,10 @@
     --duration-fast: 0ms;
     --duration: 0ms;
     --duration-slow: 0ms;
+    --motion-fast: 0ms;
+    --motion-medium: 0ms;
+    --motion-reveal: 0ms;
+    --motion-transition: 0ms;
+    --motion-stagger: 0ms;
   }
 }

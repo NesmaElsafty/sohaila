@@ -1,7 +1,6 @@
 /**
- * Interface strings only.
- * Source portfolio English body copy remains verbatim in HTML (data-source-content).
- * Arabic body translations: pending approval — see docs/translation-status.md
+ * Interface / chrome strings.
+ * Full page body EN+AR copy lives in assets/js/page-content.js (loaded after this file).
  */
 window.SOHAILA_I18N = {
   en: {
@@ -37,7 +36,7 @@ window.SOHAILA_I18N = {
       showingCount: "Showing {shown} of {total}",
       galleryPosition: "Image {current} of {total}",
       scrollHint: "Scroll horizontally to view the full table",
-      translationPending: "Arabic translation pending approval. English source text is shown.",
+      translationPending: "",
     },
     footer: {
       explore: "Explore",
@@ -88,7 +87,7 @@ window.SOHAILA_I18N = {
       showingCount: "عرض {shown} من {total}",
       galleryPosition: "صورة {current} من {total}",
       scrollHint: "مرّر أفقياً لعرض الجدول بالكامل",
-      translationPending: "الترجمة العربية قيد الاعتماد. يُعرض النص الإنجليزي الأصلي.",
+      translationPending: "",
     },
     footer: {
       explore: "استكشف",

@@ -38,14 +38,20 @@
 
     function reveal(count) {
       const next = Math.min(shown + count, items.length);
+      const newly = [];
       for (let i = shown; i < next; i += 1) {
         items[i].hidden = false;
         items[i].classList.remove("is-batch-hidden");
         items[i].removeAttribute("aria-hidden");
         items[i].querySelectorAll("button, a").forEach((el) => el.removeAttribute("tabindex"));
+        newly.push(items[i]);
       }
       shown = next;
       updateStatus();
+
+      if (window.SohailaMotion && newly.length) {
+        window.SohailaMotion.enterItems(newly);
+      }
 
       if (shown >= items.length) {
         button.hidden = true;

@@ -1,0 +1,301 @@
+/* Sohaila Halim — Motion Design System
+   Progressive enhancement: content visible without JS.
+   .js-motion enables reveal pending states after observer init.
+*/
+
+/* ---------- Scroll reveal ---------- */
+.reveal,
+[data-reveal] {
+  /* Visible by default (no-JS / reduced-motion / unsupported) */
+  opacity: 1;
+  transform: none;
+}
+
+.js-motion .reveal.is-reveal-pending:not(.is-revealed),
+.js-motion [data-reveal].is-reveal-pending:not(.is-revealed) {
+  opacity: 0;
+  transform: translate3d(0, var(--motion-reveal-distance), 0);
+  transition: none;
+}
+
+.js-motion .reveal.is-revealed,
+.js-motion [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity var(--motion-reveal) var(--motion-ease-out),
+    transform var(--motion-reveal) var(--motion-ease-out);
+}
+
+.js-motion [data-reveal="fade"].is-reveal-pending:not(.is-revealed) {
+  transform: none;
+}
+
+.js-motion [data-reveal="inline-start"].is-reveal-pending:not(.is-revealed) {
+  transform: translate3d(calc(var(--motion-reveal-distance) * -1), 0, 0);
+}
+
+[dir="rtl"] .js-motion [data-reveal="inline-start"].is-reveal-pending:not(.is-revealed) {
+  transform: translate3d(var(--motion-reveal-distance), 0, 0);
+}
+
+/* Stagger children when parent is revealed */
+.js-motion .reveal-stagger.is-revealed > .reveal-child,
+.js-motion .reveal-stagger.is-revealed > .card,
+.js-motion .reveal-stagger.is-revealed > .stat-card,
+.js-motion .reveal-stagger.is-revealed > .portfolio-item,
+.js-motion .reveal-stagger.is-revealed > .gallery-item,
+.js-motion .reveal-stagger.is-revealed > .process__step,
+.js-motion .reveal-stagger.is-revealed > .contact-channel,
+.js-motion .reveal-stagger.is-revealed > article {
+  animation: sohaila-fade-up var(--motion-reveal) var(--motion-ease-out) both;
+}
+
+.js-motion .reveal-stagger.is-revealed > :nth-child(1) { animation-delay: calc(var(--motion-stagger) * 0); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(2) { animation-delay: calc(var(--motion-stagger) * 1); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(3) { animation-delay: calc(var(--motion-stagger) * 2); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(4) { animation-delay: calc(var(--motion-stagger) * 3); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(5) { animation-delay: calc(var(--motion-stagger) * 4); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(6) { animation-delay: calc(var(--motion-stagger) * 5); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(7) { animation-delay: calc(var(--motion-stagger) * 6); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(8) { animation-delay: calc(var(--motion-stagger) * 7); }
+.js-motion .reveal-stagger.is-revealed > :nth-child(n + 9) { animation-delay: calc(var(--motion-stagger) * 8); }
+
+@keyframes sohaila-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-reveal-distance), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Newly revealed load-more / filter items */
+.js-motion .motion-enter {
+  animation: sohaila-fade-up var(--motion-reveal) var(--motion-ease-out) both;
+}
+
+/* ---------- Card interactions ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .js-motion .card--interactive:hover,
+  .js-motion a.card:hover {
+    transform: translate3d(0, var(--motion-hover-lift), 0) scale(var(--motion-hover-scale));
+    box-shadow: var(--shadow-md);
+    border-color: rgba(237, 12, 101, 0.28);
+  }
+
+  .js-motion .portfolio-item:hover,
+  .js-motion .gallery-item:hover,
+  .js-motion .stat-card:hover,
+  .js-motion .process__step:hover,
+  .js-motion .contact-channel:hover {
+    transform: translate3d(0, -4px, 0);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .js-motion .card:not(.card--interactive):not(a):hover {
+    border-color: rgba(237, 12, 101, 0.18);
+  }
+}
+
+.card--interactive:focus-visible,
+a.card:focus-visible,
+.portfolio-item a:focus-visible,
+.gallery-item button:focus-visible,
+.contact-channel:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  transform: translate3d(0, -2px, 0);
+}
+
+.card,
+.stat-card,
+.portfolio-item,
+.gallery-item,
+.process__step,
+.contact-channel {
+  transition:
+    transform var(--motion-medium) var(--motion-ease-out),
+    box-shadow var(--motion-medium) var(--motion-ease-out),
+    border-color var(--motion-medium) var(--motion-ease-out);
+}
+
+/* ---------- Tab / accordion micro-motion ---------- */
+.tabs__panel:not([hidden]) {
+  animation: sohaila-panel-in var(--motion-medium) var(--motion-ease-out);
+}
+
+@keyframes sohaila-panel-in {
+  from { opacity: 0.35; transform: translate3d(0, 8px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.accordion__panel:not([hidden]) {
+  animation: sohaila-panel-in var(--motion-medium) var(--motion-ease-out);
+}
+
+/* ---------- Lightbox dialog ---------- */
+.lightbox {
+  transition: opacity var(--motion-medium) var(--motion-ease-out), transform var(--motion-medium) var(--motion-ease-out);
+}
+
+.lightbox[open] {
+  animation: sohaila-dialog-in var(--motion-medium) var(--motion-ease-out);
+}
+
+.lightbox::backdrop {
+  animation: sohaila-backdrop-in var(--motion-medium) var(--motion-ease-out);
+}
+
+@keyframes sohaila-dialog-in {
+  from { opacity: 0; transform: translate3d(0, 12px, 0) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes sohaila-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- Page transition overlay ---------- */
+/* Veil fades with opacity; logo stays outside that opacity so SVG masks paint correctly. */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.page-transition.is-active,
+.page-transition.is-booting,
+.page-transition.is-exiting {
+  visibility: visible;
+}
+
+.page-transition.is-active,
+.page-transition.is-booting {
+  pointer-events: auto;
+}
+
+.page-transition__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-fuchsia);
+  opacity: 0;
+}
+
+.page-transition.is-active .page-transition__veil,
+.page-transition.is-booting .page-transition__veil {
+  opacity: 1;
+  /* Instant cover so the 2s handwriting starts on solid brand color */
+  transition: none;
+}
+
+.page-transition.is-exiting .page-transition__veil {
+  opacity: 0;
+  transition: opacity var(--motion-transition) var(--motion-ease-out);
+}
+
+.page-transition--light .page-transition__veil {
+  background: #fff7f9;
+}
+
+.page-transition__logo-wrap {
+  position: relative;
+  z-index: 2;
+  width: min(72vw, 22rem);
+  aspect-ratio: 372 / 233;
+  --reveal-upper: 0%;
+  --reveal-signature: 0%;
+  --reveal-english: 0%;
+}
+
+.page-transition.is-exiting .page-transition__logo-wrap {
+  visibility: hidden;
+}
+
+.page-transition__logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/*
+  Three-band handwriting wipe (JS sets --reveal-* over 2s):
+  - upper 75%: RTL wipe for Arabic name
+  - lower-left ~66%: RTL wipe for signature
+  - lower-right ~34%: LTR wipe for English lockup
+*/
+.page-transition__logo-wrap.is-revealing .page-transition__logo {
+  -webkit-mask-image:
+    linear-gradient(to left, #000 0%, #000 var(--reveal-upper), transparent var(--reveal-upper)),
+    linear-gradient(to left, #000 0%, #000 var(--reveal-signature), transparent var(--reveal-signature)),
+    linear-gradient(to right, #000 0%, #000 var(--reveal-english), transparent var(--reveal-english));
+  mask-image:
+    linear-gradient(to left, #000 0%, #000 var(--reveal-upper), transparent var(--reveal-upper)),
+    linear-gradient(to left, #000 0%, #000 var(--reveal-signature), transparent var(--reveal-signature)),
+    linear-gradient(to right, #000 0%, #000 var(--reveal-english), transparent var(--reveal-english));
+  -webkit-mask-size: 100% 75%, 66% 25%, 34% 25%;
+  mask-size: 100% 75%, 66% 25%, 34% 25%;
+  -webkit-mask-position: 0 0, 0 100%, 100% 100%;
+  mask-position: 0 0, 0 100%, 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-composite: source-over;
+  mask-composite: add;
+}
+
+.page-transition__logo-wrap object.page-transition__logo {
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .js-motion .reveal.is-reveal-pending:not(.is-revealed),
+  .js-motion [data-reveal].is-reveal-pending:not(.is-revealed) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .js-motion .reveal-stagger.is-revealed > *,
+  .js-motion .motion-enter,
+  .tabs__panel,
+  .lightbox[open],
+  .lightbox::backdrop {
+    animation: none !important;
+  }
+
+  .page-transition,
+  .page-transition.is-active,
+  .page-transition.is-booting,
+  .page-transition.is-exiting {
+    visibility: hidden !important;
+  }
+
+  .page-transition__veil {
+    transition: none !important;
+    opacity: 0 !important;
+  }
+
+  .card,
+  .stat-card,
+  .portfolio-item,
+  .gallery-item,
+  .process__step,
+  .contact-channel,
+  .card--interactive,
+  .btn {
+    transition: none !important;
+    transform: none !important;
+  }
+}

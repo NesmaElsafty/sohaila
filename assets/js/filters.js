@@ -20,22 +20,32 @@
         btn.classList.toggle("is-active", active);
       });
 
+      const newlyShown = [];
       let visible = 0;
       items.forEach((item) => {
         const cats = (item.getAttribute("data-category") || "").split(/\s+/);
         const show = filter === "all" || cats.includes(filter);
+        const wasHidden = item.hidden;
         item.hidden = !show;
         item.setAttribute("aria-hidden", show ? "false" : "true");
         item.querySelectorAll("a, button").forEach((el) => {
           if (show) el.removeAttribute("tabindex");
           else el.setAttribute("tabindex", "-1");
         });
-        if (show) visible += 1;
+        if (show) {
+          visible += 1;
+          if (wasHidden) newlyShown.push(item);
+        }
       });
 
       if (empty) {
         empty.hidden = visible > 0;
         empty.setAttribute("aria-hidden", visible > 0 ? "true" : "false");
+      }
+
+      if (window.SohailaMotion) {
+        window.SohailaMotion.refresh(grid);
+        if (newlyShown.length) window.SohailaMotion.enterItems(newlyShown.slice(0, 12));
       }
     }
 

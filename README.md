@@ -49,13 +49,25 @@ Typography uses temporary fallbacks (Barlow Condensed, DM Sans, Noto Sans Arabic
 
 - Default: English
 - Switcher stores preference in `localStorage` (`sohaila-lang`)
+- Full EN/AR for chrome **and** page body (same meaning)
 - UI strings: `assets/js/translations.js` + `locales/*.json`
-- Arabic body copy: pending approval — see `docs/translation-status.md`
-- Source English regions use `data-source-content` (`lang="en"` / `dir="ltr"` under RTL)
+- Body strings: `assets/js/page-content.js`
+- Runtime: `assets/js/i18n.js` (RTL + content mapping)
+- Details: `docs/translation-status.md`
+
+## Motion design
+
+Vanilla CSS/JS motion system (no animation libraries):
+
+- Tokens in `assets/css/variables.css`
+- Scroll reveals + card motion: `assets/css/animations.css`, `assets/js/animations.js`
+- Branded boot + page transitions (2s handwriting-style wipe): `assets/js/page-transition.js`
+- Reveal art: `logo-reveal-light.png` / `logo-reveal-fuchsia.png` (from the approved reveal SVGs), CSS mask wipe over 2s
+- Spec: `docs/motion-design-system.md`
 
 ## Refinement notes
 
-See `docs/refinement-report.md` for the production QA pass covering i18n, mobile nav, lightbox a11y, testimonials Load More, overflow fixes, and testing evidence.
+See `docs/refinement-report.md` for the production QA pass covering i18n, mobile nav, lightbox a11y, testimonials Load More, overflow fixes, motion system, and testing evidence.
 
 ## Documentation
 
@@ -64,6 +76,8 @@ See `docs/refinement-report.md` for the production QA pass covering i18n, mobile
 - `docs/asset-inventory.md`
 - `docs/translation-status.md`
 - `docs/qa-report.md`
+- `docs/motion-design-system.md`
+- `docs/refinement-report.md`
 - `assets/data/asset-manifest.json`
 
 ## Contact (from source)

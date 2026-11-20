@@ -105,7 +105,13 @@
 
   .site-nav__link {
     padding: 0.9rem 0.75rem;
-    font-size: var(--fs-sm);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .site-nav__link::after {
+    inset-inline: 0.75rem;
+    bottom: 0.35rem;
   }
 
   .header-cta {

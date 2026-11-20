@@ -16,7 +16,6 @@
 [dir="rtl"] h3,
 [dir="rtl"] h4,
 [dir="rtl"] .btn,
-[dir="rtl"] .site-nav__link,
 [dir="rtl"] .filter-btn,
 [dir="rtl"] .tabs__tab,
 [dir="rtl"] .accordion__trigger,
@@ -24,6 +23,17 @@
 [dir="rtl"] .portfolio-item__name,
 [dir="rtl"] .stat-card__label {
   font-family: var(--font-arabic), var(--font-display);
+}
+
+[dir="rtl"] .site-nav__link {
+  font-family: var(--font-arabic), var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+[dir="rtl"] .site-nav__link::after {
+  transform-origin: inline-start;
 }
 
 [dir="rtl"] .cred-list li {

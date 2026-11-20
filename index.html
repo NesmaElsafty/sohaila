@@ -14,9 +14,15 @@
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 <body id="top">
-  <a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+    <div id="page-loader" class="page-transition is-active is-booting" aria-hidden="true" aria-busy="true">
+    <div class="page-transition__veil"></div>
+    <div class="page-transition__logo-wrap"></div>
+  </div>
+  <script src="assets/js/page-transition.js"></script>
+<a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
   <div data-site-header></div>
 
   <main id="main" class="site-main">
@@ -229,9 +235,11 @@
   <div data-site-footer></div>
 
   <script src="assets/js/translations.js"></script>
+  <script src="assets/js/page-content.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/data/portfolio.js"></script>
+  <script src="assets/js/animations.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     (function () {
@@ -243,9 +251,13 @@
           <div class="portfolio-item__media"><img src="${c.image}" alt="${c.name} logo" loading="lazy" width="160" height="160" /></div>
           <div class="portfolio-item__body">
             <h3 class="portfolio-item__name">${c.name}</h3>
-            <p class="portfolio-item__meta">${c.description}</p>
+            <p class="portfolio-item__meta">${(window.SohailaI18n && window.SohailaI18n.translateDescription(c.description)) || c.description}</p>
           </div>
         </article>`).join("");
+      if (window.SohailaMotion) {
+        window.SohailaMotion.refresh(mount);
+        window.SohailaMotion.enterItems(mount.querySelectorAll(".portfolio-item"));
+      }
     })();
   </script>
 </body>

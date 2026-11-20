@@ -32,7 +32,7 @@
             <img src="assets/images/brand/logo-dark.png" alt="Sohaila Halim Arabic calligraphy logo" width="120" height="48" />
             <span class="brand-logo__text">
               <span class="brand-logo__name">SOHAILA HALIM</span>
-              <span class="brand-logo__role">Brand Strategist</span>
+              <span class="brand-logo__role" data-i18n="shared.brandStrategistShort">Brand Strategist</span>
             </span>
           </a>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="nav.openMenu" aria-label="Open menu">
@@ -64,7 +64,7 @@
             <div>
               <p class="site-footer__brand-name">SOHAILA HALIM</p>
               <p class="site-footer__brand-title">Brand, Marketing &amp; Business Growth Strategist</p>
-              <p>Building Brands. Shaping Strategies. Driving Growth.</p>
+              <p class="site-footer__tagline">Building Brands. Shaping Strategies. Driving Growth.</p>
             </div>
             <div>
               <p class="site-footer__heading" data-i18n="footer.explore">Explore</p>
@@ -85,37 +85,11 @@
             </div>
           </div>
           <div class="site-footer__bottom">
-            <p>SOHAILA HALIM Branding Portfolio 2026</p>
+            <p class="site-footer__credit">SOHAILA HALIM Branding Portfolio 2026</p>
             <a href="#top" data-i18n="common.backToTop">Back to top</a>
           </div>
         </div>
       </footer>`;
-  }
-
-  function injectTranslationBanner() {
-    if (document.querySelector(".translation-banner")) return;
-    const main = document.getElementById("main");
-    if (!main) return;
-    const banner = document.createElement("div");
-    banner.className = "translation-banner";
-    banner.setAttribute("role", "status");
-    banner.hidden = true;
-    banner.setAttribute("aria-hidden", "true");
-    banner.innerHTML = `<p data-i18n="common.translationPending">Arabic translation pending approval. English source text is shown.</p>`;
-    main.insertBefore(banner, main.firstChild);
-
-    function sync() {
-      const lang = window.SohailaI18n ? window.SohailaI18n.getStoredLang() : "en";
-      const show = lang === "ar";
-      banner.hidden = !show;
-      banner.setAttribute("aria-hidden", show ? "false" : "true");
-      if (show && window.SohailaI18n) {
-        const p = banner.querySelector("[data-i18n]");
-        if (p) p.textContent = window.SohailaI18n.t("common.translationPending");
-      }
-    }
-    document.addEventListener("sohaila:langchange", sync);
-    sync();
   }
 
   function boot() {
@@ -123,7 +97,7 @@
     renderFooter();
     if (window.SohailaI18n) window.SohailaI18n.init();
     if (window.SohailaNav) window.SohailaNav.init();
-    injectTranslationBanner();
+    if (window.SohailaMotion) window.SohailaMotion.refresh();
   }
 
   if (document.readyState === "loading") {

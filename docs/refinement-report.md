@@ -38,12 +38,16 @@ Scope: Production QA & UX refinement of existing seven-page site (no rebuild).
 - `assets/js/filters.js`
 - `assets/js/main.js`
 - `assets/js/load-more.js` *(new)*
+- `assets/js/animations.js` *(new — motion)*
+- `assets/js/page-transition.js` *(new — motion)*
 
 ### CSS
 - `assets/css/global.css`
 - `assets/css/components.css`
 - `assets/css/responsive.css`
 - `assets/css/rtl.css`
+- `assets/css/variables.css` *(motion tokens)*
+- `assets/css/animations.css` *(new — motion)*
 
 ### HTML
 - `index.html`
@@ -121,7 +125,25 @@ From `assets/data/content-manifest.json`:
 
 **Not claimed:** 100% paragraph-level DOM verification of every PDF sentence.
 
-## 10. Outstanding limitations
+## 10. Motion design system (follow-on pass)
+
+Implemented without rebuild:
+
+| Area | Implementation |
+|---|---|
+| Tokens | `--motion-*` in `variables.css` |
+| Scroll reveal | `animations.js` + `animations.css` (IntersectionObserver, progressive enhancement) |
+| Cards | Fade-up once; hover/focus for interactive; touch hover gated |
+| Page transition | Fuchsia overlay + **PNG mask** “handwriting-style” reveal of original `logo-light.png` |
+| Nav typography | DM Sans, 0.875rem/500, no uppercase; underline `scaleX`; Arabic typeface retained |
+| Buttons | Lift / press / focus-visible micro-interactions |
+| Dynamic grids | `refresh` / `enterItems` from filters + load-more |
+
+Docs: `docs/motion-design-system.md`
+
+**Logo note:** Repository has PNG logos only — reveal is a simulated mask sweep, not vector stroke-dashoffset handwriting.
+
+## 11. Outstanding limitations
 
 1. Approved Arabic body translations still pending.
 2. 10 client logo names remain uncertain (flagged in data).
@@ -130,6 +152,7 @@ From `assets/data/content-manifest.json`:
 5. Full six-viewport × EN/AR screenshot matrix not fully completed (390 + desktop evidenced).
 6. Automated axe/Lighthouse audit **NOT TESTED** in this pass.
 7. Working extract folders (`_pdf_*`, `_extract*`) remain for audit; exclude from production deploy if desired.
+8. Page-transition entrance timing is brief by design; OS-level `prefers-reduced-motion` disables it (verified in automation).
 
 ## Critical bugs resolved (evidence)
 
