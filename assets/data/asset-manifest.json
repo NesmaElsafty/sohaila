@@ -1,0 +1,1306 @@
+[
+  {
+    "id": "hero-portrait",
+    "source": "user-supplied",
+    "path": "assets/images/hero/sohaila-hero.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "logo-light",
+    "source": "user-supplied",
+    "path": "assets/images/brand/logo-light.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "logo-dark",
+    "source": "user-supplied",
+    "path": "assets/images/brand/logo-dark.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "brand-guideline",
+    "source": "user-supplied",
+    "path": "assets/images/brand/brand-guideline.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "about-portrait",
+    "source": "pdf-page-2-crop",
+    "path": "assets/images/about/sohaila-about.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "about-contact",
+    "source": "pdf-page-26",
+    "path": "assets/images/about/sohaila-contact.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "multi-market-map",
+    "source": "pdf-page-4-crop",
+    "path": "assets/images/about/multi-market-map.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-alejon",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\alejon.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-avene",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\avene.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-bioderma",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\bioderma.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dear-skin-care",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\dear-skin-care.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-kitti-mom-kids",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\kitti-mom-kids.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-kitti",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\kitti.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-myvi",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\myvi.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-now-egypt",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\now-egypt.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-nutrascience",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\nutrascience.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-ts-beauty-shop",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\ts-beauty-shop.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-vabilla",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\care-beauty\\vabilla.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-kelloggs",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\corporate\\kelloggs.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-lexus",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\corporate\\lexus.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-talabat",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\corporate\\talabat.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-wuuzz",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\corporate\\wuuzz.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-government-01",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\government-01.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-government-02",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\government-02.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-government-03",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\government-03.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-government-04",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\government-04.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-government-06",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\government-06.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-sada-al-wadi",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\government\\sada-al-wadi.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-almehwar-hospital",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\almehwar-hospital.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-el-nada-hospital",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\el-nada-hospital.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-healthcare-01",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\healthcare-01.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-healthcare-07",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\healthcare-07.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-my-child-center",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\my-child-center.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-qaitbay-hospital",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\qaitbay-hospital.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-rofayda-hospital",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\healthcare\\rofayda-hospital.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-ahmed-darwish",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\ahmed-darwish.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-aya-mamdouh",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\aya-mamdouh.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-abdallah-shaheer",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-abdallah-shaheer.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-islam-mohamed",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-islam-mohamed.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-karim-sayed",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-karim-sayed.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-mahmoud-sayed",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-mahmoud-sayed.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-nour",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-nour.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-rami-nakhla",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-rami-nakhla.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dr-ramy-saeed",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\dr-ramy-saeed.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-eleonora-attar",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\eleonora-attar.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-ghizlan-guenez",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\ghizlan-guenez.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-lina-bayazid",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\lina-bayazid.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-luciana-habib",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\luciana-habib.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-mohamed-abouelregal",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\mohamed-abouelregal.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-mohamed-roshdy",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\mohamed-roshdy.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-nilly-shams",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\nilly-shams.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-noha-el-batrawi",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\noha-el-batrawi.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-rajaeibahaj",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\rajaeibahaj.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-randa-azar",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\randa-azar.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-sewar-amer",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\sewar-amer.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-sherif-helal",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\sherif-helal.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-sole-fine-works",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\sole-fine-works.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-yamankunbargi25",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\personal\\yamankunbargi25.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-creative-interiors",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\creative-interiors.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-d-logo",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\d-logo.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-hs-real-estate",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\hs-real-estate.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-kayan",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\kayan.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-marseille-group",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\marseille-group.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-masters",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\masters.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-maven",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\maven.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-seredo",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\seredo.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-sole-fine-works",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\sole-fine-works.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-vento",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\real-estate\\vento.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-al-malakiya",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\al-malakiya.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-arab-downtown",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\arab-downtown.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-dinamo",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\dinamo.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-fahim",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\fahim.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-first-rider",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\first-rider.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-first-vet",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\first-vet.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-mzad-arab",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\mzad-arab.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-noa",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\noa.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-plasti-co-pack",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\plasti-co-pack.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-plastihub",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\plastihub.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-qatar-filters",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\qatar-filters.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-royal-pet",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\royal-pet.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-royal-vet-clinic",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\royal-vet-clinic.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-startup-08",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\startup-08.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-startup-13",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\startup-13.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-the-pro-english",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\the-pro-english.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "client-wingoo",
+    "source": "pdf-extract",
+    "path": "assets\\images\\clients\\startups\\wingoo.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-01",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-01.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-02",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-02.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-03",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-03.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-04",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-04.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-05",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-05.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-06",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-06.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-07",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-07.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-08",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-08.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-09",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-09.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-10",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-10.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-11",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-11.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-12",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-12.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-13",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-13.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-14",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-14.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-15",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-15.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-16",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-16.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-17",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-17.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-18",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-18.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-19",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-19.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-20",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-20.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-21",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-21.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-22",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-22.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-23",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-23.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-24",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-24.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-25",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-25.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "result-26",
+    "source": "pdf-pages-16-18",
+    "path": "assets/images/results/result-26.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-01",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-01.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-02",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-02.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-03",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-03.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-04",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-04.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-05",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-05.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-06",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-06.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-07",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-07.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-08",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-08.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-09",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-09.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-10",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-10.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-11",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-11.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-12",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-12.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-13",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-13.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-14",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-14.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-15",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-15.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-16",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-16.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-17",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-17.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-18",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-18.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-19",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-19.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-20",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-20.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-21",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-21.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-22",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-22.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-23",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-23.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-24",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-24.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-25",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-25.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-26",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-26.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-27",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-27.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-28",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-28.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-29",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-29.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-30",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-30.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-31",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-31.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-32",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-32.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-33",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-33.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-34",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-34.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-35",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-35.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-36",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-36.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-37",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-37.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-38",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-38.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-39",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-39.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-40",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-40.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-41",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-41.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-42",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-42.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-43",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-43.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-44",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-44.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-45",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-45.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-46",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-46.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-47",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-47.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-48",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-48.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-49",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-49.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-50",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-50.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-51",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-51.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  },
+  {
+    "id": "testimonial-52",
+    "source": "pdf-pages-19-25",
+    "path": "assets/images/testimonials/testimonial-52.png",
+    "status": "available",
+    "replacementAllowed": false,
+    "notes": ""
+  }
+]

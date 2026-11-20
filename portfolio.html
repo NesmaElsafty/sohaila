@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Portfolio — Sohaila Halim</title>
+  <meta name="description" content="Client portfolio across personal brands, corporate brands, care & beauty, healthcare, real estate, government, and startups." />
+  <link rel="icon" href="assets/images/brand/logo-dark.png" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+</head>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+  <div data-site-header></div>
+
+  <main id="main" class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Portfolio</p>
+        <h1 class="page-hero__title section__title--lime">CLIENT PORTFOLIO</h1>
+        <p class="section__lead">Strategic Partnerships Across Personal Brands &amp; Businesses.</p>
+      </div>
+    </section>
+
+    <section class="section section--blush">
+      <div class="container container--wide">
+        <div class="grid grid--2" style="margin-bottom:2.5rem">
+          <article class="card">
+            <h2 class="card__title">Personal Brands &amp; High-Ticket Businesses</h2>
+            <p><strong>Building Authority. Monetizing Expertise. Scaling High-Value Businesses.</strong></p>
+            <p class="card__text">Strategic partnerships with coaches, consultants, doctors, content creators, public figures, and industry experts to develop powerful personal brands, build scalable business models, and drive revenue through strategic positioning, premium offers, and performance-driven acquisition funnels.</p>
+            <p class="card__text"><strong>Core Expertise:</strong> Personal Branding · High-Ticket Business Scaling · Offer Development · Paid Sales Funnels · Revenue Growth</p>
+          </article>
+          <article class="card">
+            <h2 class="card__title">Corporate Brands &amp; Business Growth</h2>
+            <p><strong>Building Competitive Brands. Developing Markets. Driving Business Growth.</strong></p>
+            <p class="card__text">Strategic collaborations with startups, established companies, and commercial organizations across diverse industries, focusing on brand development, market positioning, product strategy, integrated marketing, and sustainable business growth.</p>
+            <p class="card__text"><strong>Core Expertise:</strong> Brand Development · Marketing Strategy · Product Positioning · Customer Acquisition · Market Expansion</p>
+          </article>
+        </div>
+
+        <div class="filter-bar" data-filter-bar data-filter-target="#portfolio-grid" data-empty="#portfolio-empty" role="group" aria-label="Portfolio filters">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All Clients</button>
+          <button type="button" class="filter-btn" data-filter="personal" aria-pressed="false">Personal Brands &amp; High-Ticket Businesses</button>
+          <button type="button" class="filter-btn" data-filter="corporate" aria-pressed="false">Corporate Brands</button>
+          <button type="button" class="filter-btn" data-filter="care-beauty" aria-pressed="false">Care &amp; Beauty Brands</button>
+          <button type="button" class="filter-btn" data-filter="healthcare" aria-pressed="false">Healthcare &amp; Medical Institutions</button>
+          <button type="button" class="filter-btn" data-filter="real-estate" aria-pressed="false">Real Estate, Construction &amp; Engineering Services</button>
+          <button type="button" class="filter-btn" data-filter="government" aria-pressed="false">Government Entities &amp; Digital Platforms</button>
+          <button type="button" class="filter-btn" data-filter="startups" aria-pressed="false">Startups</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid" data-filter-grid></div>
+        <p class="empty-state" id="portfolio-empty" data-filter-empty hidden data-i18n="common.emptyFilter">No items match this filter.</p>
+        <p class="text-muted" style="margin-top:1.5rem;font-size:var(--fs-sm)">Click on the image to be redirected to the page. (Where a verified Instagram link exists.)</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/data/portfolio.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById("portfolio-grid");
+      if (!grid || !window.SOHAILA_PORTFOLIO) return;
+      grid.innerHTML = window.SOHAILA_PORTFOLIO.map((c) => {
+        const media = `<div class="portfolio-item__media"><img src="${c.image}" alt="${c.name}" loading="lazy" width="200" height="200" /></div>
+          <div class="portfolio-item__body">
+            <h3 class="portfolio-item__name">${c.name}</h3>
+            <p class="portfolio-item__meta">${c.description}</p>
+          </div>`;
+        if (c.url) {
+          return `<article class="portfolio-item" data-category="${c.category}">
+            <a class="portfolio-item__link" href="${c.url}" target="_blank" rel="noopener noreferrer">${media}</a>
+          </article>`;
+        }
+        return `<article class="portfolio-item" data-category="${c.category}">${media}</article>`;
+      }).join("");
+    })();
+  </script>
+</body>
+</html>

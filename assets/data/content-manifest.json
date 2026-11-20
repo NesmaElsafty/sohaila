@@ -1,0 +1,161 @@
+{
+  "source": "Suhaila Portfolio 7-11-2026.pdf",
+  "pages": 26,
+  "websitePages": [
+    "index.html",
+    "about.html",
+    "expertise.html",
+    "portfolio.html",
+    "results.html",
+    "testimonials.html",
+    "contact.html"
+  ],
+  "items": [
+    {
+      "id": "home-hero-001",
+      "sourcePage": 1,
+      "type": "hero",
+      "destinationPage": "index.html",
+      "destinationSection": "hero",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "about-intro-001",
+      "sourcePage": 2,
+      "type": "section",
+      "destinationPage": "about.html",
+      "destinationSection": "introduction",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "about-credentials-001",
+      "sourcePage": 3,
+      "type": "section",
+      "destinationPage": "about.html",
+      "destinationSection": "credentials",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "about-markets-001",
+      "sourcePage": 4,
+      "type": "section",
+      "destinationPage": "about.html",
+      "destinationSection": "where-we-work",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-philosophy-001",
+      "sourcePage": 5,
+      "type": "heading",
+      "originalText": "My Strategic Philosophy",
+      "destinationPage": "expertise.html",
+      "destinationSection": "strategic-philosophy",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-who-001",
+      "sourcePage": 6,
+      "type": "section",
+      "destinationPage": "expertise.html",
+      "destinationSection": "who-i-work-with",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-areas-001",
+      "sourcePage": 7,
+      "type": "section",
+      "destinationPage": "expertise.html",
+      "destinationSection": "strategic-expertise",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-impact-001",
+      "sourcePage": 8,
+      "type": "section",
+      "destinationPage": "expertise.html",
+      "destinationSection": "business-impact",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-special-001",
+      "sourcePage": 9,
+      "type": "section",
+      "destinationPage": "expertise.html",
+      "destinationSection": "specialized",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "expertise-approach-001",
+      "sourcePage": 10,
+      "type": "section",
+      "destinationPage": "expertise.html",
+      "destinationSection": "strategic-approach",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "portfolio-all-001",
+      "sourcePage": "11-13",
+      "type": "gallery",
+      "destinationPage": "portfolio.html",
+      "destinationSection": "gallery",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented",
+      "notes": "Some logo-only names flagged nameUncertain"
+    },
+    {
+      "id": "results-tables-001",
+      "sourcePage": 14,
+      "type": "tables",
+      "destinationPage": "results.html",
+      "destinationSection": "tables",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "about-why-001",
+      "sourcePage": 15,
+      "type": "section",
+      "destinationPage": "about.html",
+      "destinationSection": "why-work-with-me",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "results-evidence-001",
+      "sourcePage": "16-18",
+      "type": "gallery",
+      "destinationPage": "results.html",
+      "destinationSection": "evidence",
+      "translationStatus": "n/a-images",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "testimonials-001",
+      "sourcePage": "19-25",
+      "type": "gallery",
+      "destinationPage": "testimonials.html",
+      "destinationSection": "gallery",
+      "translationStatus": "n/a-images",
+      "implementationStatus": "implemented"
+    },
+    {
+      "id": "contact-001",
+      "sourcePage": 26,
+      "type": "section",
+      "destinationPage": "contact.html",
+      "destinationSection": "contact",
+      "translationStatus": "source-en-only",
+      "implementationStatus": "implemented"
+    }
+  ]
+}

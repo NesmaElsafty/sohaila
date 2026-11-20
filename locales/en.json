@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "expertise": "Expertise",
+    "portfolio": "Portfolio",
+    "results": "Results",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cta": "Let's Talk",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "exploreExpertise": "Explore Expertise",
+    "viewPortfolio": "View Portfolio",
+    "contact": "Contact",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "backToTop": "Back to top",
+    "filterAll": "All",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "emptyFilter": "No items match this filter.",
+    "formUnavailable": "Contact form integration is pending. Please use email or phone to reach out.",
+    "skipToContent": "Skip to content"
+  },
+  "footer": {
+    "explore": "Explore",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "_note": "Source portfolio body copy remains verbatim in HTML. This file covers interface strings only."
+}

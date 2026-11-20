@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonials — Sohaila Halim</title>
+  <meta name="description" content="Original client testimonial screenshots from Sohaila Halim's portfolio." />
+  <link rel="icon" href="assets/images/brand/logo-dark.png" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+</head>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+  <div data-site-header></div>
+
+  <main id="main" class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Testimonials</p>
+        <h1 class="page-hero__title">Testimonials</h1>
+        <p class="section__desc">Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.</p>
+      </div>
+    </section>
+
+    <section class="section section--blush">
+      <div class="container container--wide">
+        <div class="gallery-grid" id="testimonials-gallery" data-lightbox-gallery></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/data/testimonials.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const mount = document.getElementById("testimonials-gallery");
+      if (!mount || !window.SOHAILA_TESTIMONIALS) return;
+      mount.innerHTML = window.SOHAILA_TESTIMONIALS.map((item) => `
+        <article class="gallery-item">
+          <button type="button" data-lightbox-item data-full="${item.src}" data-caption="${item.caption}">
+            <div class="gallery-item__media" style="aspect-ratio:4/5">
+              <img src="${item.src}" alt="${item.alt}" loading="lazy" width="320" height="400" />
+            </div>
+            <p class="gallery-item__caption">${item.caption}</p>
+          </button>
+        </article>`).join("");
+    })();
+  </script>
+</body>
+</html>

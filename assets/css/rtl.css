@@ -1,0 +1,40 @@
+[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-body);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .btn,
+[dir="rtl"] .site-nav__link,
+[dir="rtl"] .filter-btn,
+[dir="rtl"] .tabs__tab,
+[dir="rtl"] .accordion__trigger,
+[dir="rtl"] .section__eyebrow,
+[dir="rtl"] .portfolio-item__name,
+[dir="rtl"] .stat-card__label {
+  font-family: var(--font-arabic), var(--font-display);
+}
+
+[dir="rtl"] .cred-list li {
+  border-inline-start: 0;
+  border-inline-end: 3px solid var(--color-lime);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+[dir="rtl"] .watermark img {
+  inset-inline-end: auto;
+  inset-inline-start: -8%;
+}
+
+/* Do not mirror photographs, logos, charts, or screenshots */
+[dir="rtl"] .hero__media img,
+[dir="rtl"] .portfolio-item__media img,
+[dir="rtl"] .gallery-item__media img,
+[dir="rtl"] .markets-map img,
+[dir="rtl"] .lightbox__media img,
+[dir="rtl"] .brand-logo img,
+[dir="rtl"] .about-media img {
+  transform: none;
+}
