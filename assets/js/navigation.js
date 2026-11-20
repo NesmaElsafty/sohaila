@@ -87,6 +87,14 @@
       syncToggleLabel(header.classList.contains("is-open"));
     });
 
+    function syncScrolled() {
+      const scrolled = window.scrollY > 8;
+      header.classList.toggle("is-scrolled", scrolled);
+    }
+
+    syncScrolled();
+    window.addEventListener("scroll", syncScrolled, { passive: true });
+
     const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
     nav.querySelectorAll(".site-nav__link").forEach((link) => {
       const href = (link.getAttribute("href") || "").toLowerCase();

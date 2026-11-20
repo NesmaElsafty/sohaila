@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Testimonials — Sohaila Halim</title>
+  <title>Testimonials</title>
   <meta name="description" content="Original client testimonial screenshots from Sohaila Halim's portfolio." />
-  <meta property="og:title" content="Testimonials — Sohaila Halim" />
+  <meta property="og:title" content="Testimonials" />
   <meta property="og:image" content="assets/images/hero/sohaila-hero.png" />
   <link rel="icon" href="assets/images/brand/logo-dark.png" />
   <link rel="stylesheet" href="assets/css/variables.css" />
@@ -27,20 +27,20 @@
   <main id="main" class="site-main">
     <section class="page-hero">
       <div class="container">
-        <p class="section__eyebrow">Testimonials</p>
+        <!-- <p class="section__eyebrow">Testimonials</p> -->
         <h1 class="page-hero__title">Testimonials</h1>
         <div data-source-content>
-          <p class="section__desc">Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.</p>
+          <!-- <p class="section__desc">Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.</p> -->
         </div>
       </div>
     </section>
 
     <section class="section section--blush section--tight">
-      <div class="container container--wide" data-load-more>
-        <div class="gallery-grid" id="testimonials-gallery" data-lightbox-gallery data-load-more-gallery></div>
-        <div class="load-more">
-          <p class="load-more__status" data-load-more-status aria-live="polite"></p>
-          <button type="button" class="btn btn--primary" data-load-more-btn data-i18n="common.loadMore">Load more</button>
+      <div class="container container--wide" data-load-more data-load-more-mode="scroll" data-load-more-page-size="5">
+        <div class="gallery-grid gallery-grid--images" id="testimonials-gallery" data-lightbox-gallery data-load-more-gallery></div>
+        <div class="load-more load-more--scroll">
+          <p class="load-more__status sr-only" data-load-more-status aria-live="polite"></p>
+          <div class="load-more__sentinel" data-load-more-sentinel aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -70,32 +70,31 @@
       if (!mount || !window.SOHAILA_TESTIMONIALS) return;
 
       const frag = document.createDocumentFragment();
-      window.SOHAILA_TESTIMONIALS.forEach((item) => {
+      window.SOHAILA_TESTIMONIALS.forEach((item, index) => {
         const article = document.createElement("article");
-        article.className = "gallery-item";
+        article.className = "gallery-item gallery-item--image";
         article.setAttribute("data-load-more-item", "");
         article.innerHTML =
           '<button type="button" data-lightbox-item data-full="' +
           escapeHtml(item.src) +
-          '" data-caption="' +
-          escapeHtml(item.caption) +
+          '" data-caption="" aria-label="Enlarge image ' +
+          (index + 1) +
           '">' +
           '<div class="gallery-item__media" style="aspect-ratio:4/5">' +
           '<img src="' +
           escapeHtml(item.src) +
-          '" alt="' +
-          escapeHtml(item.alt) +
-          '" loading="lazy" width="320" height="400" />' +
+          '" alt="" loading="lazy" width="320" height="400" />' +
           "</div>" +
-          '<p class="gallery-item__caption">' +
-          escapeHtml(item.caption) +
-          "</p>" +
           "</button>";
         frag.appendChild(article);
       });
       mount.appendChild(frag);
 
       if (window.SohailaLoadMore) window.SohailaLoadMore.initAll();
+      if (window.SohailaLightbox) window.SohailaLightbox.initAll();
+      if (window.SohailaMotion) {
+        window.SohailaMotion.refresh(mount);
+      }
     })();
   </script>
 </body>

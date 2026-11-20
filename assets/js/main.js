@@ -3,7 +3,7 @@
     { href: "index.html", key: "home", label: "Home" },
     { href: "about.html", key: "about", label: "About" },
     { href: "expertise.html", key: "expertise", label: "Expertise" },
-    { href: "portfolio.html", key: "portfolio", label: "Portfolio" },
+    { href: "portfolio.html", key: "portfolio", label: "Our Clients" },
     { href: "results.html", key: "results", label: "Results" },
     { href: "testimonials.html", key: "testimonials", label: "Testimonials" },
     { href: "contact.html", key: "contact", label: "Contact" },
@@ -53,40 +53,14 @@
   function renderFooter() {
     const mount = document.querySelector("[data-site-footer]");
     if (!mount) return;
-    const links = PAGES.map(
-      (p) => `<li><a href="${p.href}" data-i18n="nav.${p.key}">${escapeHtml(p.label)}</a></li>`
-    ).join("");
 
     mount.innerHTML = `
       <footer class="site-footer">
         <div class="container container--wide">
-          <div class="site-footer__grid">
-            <div>
-              <p class="site-footer__brand-name">SOHAILA HALIM</p>
-              <p class="site-footer__brand-title">Brand, Marketing &amp; Business Growth Strategist</p>
-              <p class="site-footer__tagline">Building Brands. Shaping Strategies. Driving Growth.</p>
-            </div>
-            <div>
-              <p class="site-footer__heading" data-i18n="footer.explore">Explore</p>
-              <ul class="site-footer__list">${links}</ul>
-            </div>
-            <div>
-              <p class="site-footer__heading" data-i18n="footer.contact">Contact</p>
-              <ul class="site-footer__list">
-                <li><a href="mailto:Sohaila.a.halim@gmail.com">Sohaila.a.halim@gmail.com</a></li>
-                <li><a href="tel:+201012537915">01012537915</a></li>
-                <li><a href="tel:+201060420920">01060420920</a></li>
-                <li><a href="https://www.linkedin.com/in/sohailahalim/" target="_blank" rel="noopener noreferrer">/sohailahalim</a></li>
-              </ul>
-              <div class="lang-switcher" role="group" aria-label="Language" style="margin-top:1rem">
-                <button type="button" data-lang="en" aria-pressed="true">EN</button>
-                <button type="button" data-lang="ar" aria-pressed="false">AR</button>
-              </div>
-            </div>
-          </div>
-          <div class="site-footer__bottom">
-            <p class="site-footer__credit">SOHAILA HALIM Branding Portfolio 2026</p>
-            <a href="#top" data-i18n="common.backToTop">Back to top</a>
+          <div class="site-footer__rule" aria-hidden="true"></div>
+          <div class="site-footer__credit">
+            <p class="site-footer__copy">© 2026 Sohaila Halim</p>
+            <p class="site-footer__powered">Powered by <a href="https://nesma.dev" target="_blank" rel="noopener noreferrer">nesma.dev</a></p>
           </div>
         </div>
       </footer>`;

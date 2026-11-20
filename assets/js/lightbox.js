@@ -122,7 +122,7 @@
     img.alt = item.alt || "";
     img.style.objectFit = "contain";
 
-    lb.querySelector(".lightbox__caption").textContent = item.caption || item.alt || "";
+    lb.querySelector(".lightbox__caption").textContent = item.caption || "";
     lb.querySelector(".lightbox__position").textContent = positionLabel(index, items.length);
 
     previouslyFocused = activeTrigger || document.activeElement;

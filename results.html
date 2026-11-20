@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case Studies &amp; Results — Sohaila Halim</title>
+  <title>Case Studies &amp; Results   </title>
   <meta name="description" content="Selected success stories, medical clinic growth, e-commerce results, and original results evidence screenshots." />
-  <meta property="og:title" content="Case Studies &amp; Results — Sohaila Halim" />
+  <meta property="og:title" content="Case Studies &amp; Results   " />
   <meta property="og:image" content="assets/images/hero/sohaila-hero.png" />
   <link rel="icon" href="assets/images/brand/logo-dark.png" />
   <link rel="stylesheet" href="assets/css/variables.css" />
@@ -27,7 +27,7 @@
   <main id="main" class="site-main">
     <section class="page-hero">
       <div class="container" data-source-content>
-        <p class="section__eyebrow">Results</p>
+        <!-- <p class="section__eyebrow">Results</p> -->
         <h1 class="page-hero__title">Case Studies &amp; Results</h1>
         <p class="section__lead">Selected Success Stories</p>
         <nav class="section-nav" aria-label="Results sections">
@@ -41,7 +41,7 @@
 
     <section class="section section--tight" id="high-ticket" aria-labelledby="ht-title">
       <div class="container" data-source-content>
-        <h2 id="ht-title" class="section__title section__title--fuchsia">High-Ticket Business Scaling — Success Stories</h2>
+        <h2 id="ht-title" class="section__title section__title--fuchsia">High-Ticket Business Scaling   Success Stories</h2>
         <p class="section__desc">Low-Ticket Funnels · Paid Acquisition · High-Ticket Offers</p>
         <p class="table-scroll-hint" data-i18n="common.scrollHint">Scroll horizontally to view the full table</p>
         <div class="table-wrap" tabindex="0" role="region" aria-labelledby="ht-title">
@@ -123,9 +123,9 @@
       <div class="container container--wide">
         <div data-source-content>
           <h2 id="ev-title" class="section__title section__title--fuchsia">Results Evidence Gallery</h2>
-          <p class="section__desc">Original results screenshots from the portfolio (pages 16–18). Click to enlarge.</p>
+          <!-- <p class="section__desc">Original results screenshots from the portfolio (pages 16–18). Click to enlarge.</p> -->
         </div>
-        <div class="gallery-grid" id="results-gallery" data-lightbox-gallery style="margin-top:1.5rem"></div>
+        <div class="gallery-grid gallery-grid--images" id="results-gallery" data-lightbox-gallery style="margin-top:1.5rem"></div>
       </div>
     </section>
   </main>
@@ -153,24 +153,19 @@
       if (!mount || !window.SOHAILA_RESULTS) return;
 
       mount.innerHTML = window.SOHAILA_RESULTS.evidence
-        .map(function (item) {
+        .map(function (item, index) {
           return (
-            '<article class="gallery-item">' +
+            '<article class="gallery-item gallery-item--image">' +
             '<button type="button" data-lightbox-item data-full="' +
             escapeHtml(item.src) +
-            '" data-caption="' +
-            escapeHtml(item.caption) +
+            '" data-caption="" aria-label="Enlarge image ' +
+            (index + 1) +
             '">' +
             '<div class="gallery-item__media">' +
             '<img src="' +
             escapeHtml(item.src) +
-            '" alt="' +
-            escapeHtml(item.alt) +
-            '" loading="lazy" width="400" height="300" />' +
+            '" alt="" loading="lazy" width="400" height="300" />' +
             "</div>" +
-            '<p class="gallery-item__caption">' +
-            escapeHtml(item.caption) +
-            "</p>" +
             "</button></article>"
           );
         })

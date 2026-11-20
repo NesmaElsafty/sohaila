@@ -39,8 +39,8 @@ window.SOHAILA_RESULTS = {
     return {
       id: `result-${n}`,
       src: `assets/images/results/result-${n}.png`,
-      alt: `Results evidence screenshot ${n} from original portfolio`,
-      caption: `Results evidence ${n}`,
+      alt: "",
+      caption: "",
     };
   }),
 };

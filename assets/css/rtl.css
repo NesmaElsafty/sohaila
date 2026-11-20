@@ -54,6 +54,38 @@
 [dir="rtl"] .markets-map img,
 [dir="rtl"] .lightbox__media img,
 [dir="rtl"] .brand-logo img,
-[dir="rtl"] .about-media img {
+[dir="rtl"] .about-media img,
+[dir="rtl"] .about-spread__media img {
   transform: none;
 }
+
+[dir="rtl"] .about-spread__bar {
+  background: linear-gradient(
+    270deg,
+    var(--color-fuchsia) 0 42%,
+    var(--color-lime) 42% 100%
+  );
+}
+
+[dir="rtl"] .philosophy__quote::before {
+  content: "”";
+}
+
+[dir="rtl"] .philosophy__quote::after {
+  content: "“";
+}
+
+[dir="rtl"] .clients-preview__top {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .specialized__tagline {
+  border-radius: var(--radius-sm);
+}
+
+[dir="rtl"] .clients-carousel__btn--prev span,
+[dir="rtl"] .clients-carousel__btn--next span {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+

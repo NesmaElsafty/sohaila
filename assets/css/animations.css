@@ -47,7 +47,9 @@
 .js-motion .reveal-stagger.is-revealed > .gallery-item,
 .js-motion .reveal-stagger.is-revealed > .process__step,
 .js-motion .reveal-stagger.is-revealed > .contact-channel,
-.js-motion .reveal-stagger.is-revealed > article {
+.js-motion .reveal-stagger.is-revealed > .expertise-areas__item,
+.js-motion .reveal-stagger.is-revealed > article,
+.js-motion .reveal-stagger.is-revealed > li {
   animation: sohaila-fade-up var(--motion-reveal) var(--motion-ease-out) both;
 }
 
@@ -77,31 +79,104 @@
   animation: sohaila-fade-up var(--motion-reveal) var(--motion-ease-out) both;
 }
 
-/* ---------- Card interactions ---------- */
+/* ---------- Hero / intro entrance (start after page loader) ---------- */
+.hero-intro__copy,
+.hero-intro__visual {
+  opacity: 1;
+  transform: none;
+}
+
+.js-motion .hero-intro__copy:not(.is-in),
+.js-motion .hero-intro__visual:not(.is-in) {
+  opacity: 0;
+  transition: none;
+}
+
+/* LTR: text from left, image from right */
+.js-motion .hero-intro__copy:not(.is-in) {
+  transform: translate3d(-2.75rem, 0, 0);
+}
+
+.js-motion .hero-intro__visual:not(.is-in) {
+  transform: translate3d(2.75rem, 0, 0);
+}
+
+/* RTL (Arabic): opposite directions */
+[dir="rtl"] .js-motion .hero-intro__copy:not(.is-in) {
+  transform: translate3d(2.75rem, 0, 0);
+}
+
+[dir="rtl"] .js-motion .hero-intro__visual:not(.is-in) {
+  transform: translate3d(-2.75rem, 0, 0);
+}
+
+.js-motion .hero-intro__copy.is-in,
+.js-motion .hero-intro__visual.is-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity 780ms var(--motion-ease-out),
+    transform 780ms var(--motion-ease-out);
+}
+
+.js-motion .hero-intro__visual.is-in {
+  transition-delay: 90ms;
+}
+
+/* Preserve about-media offset after intro lands */
+.js-motion .about-media.hero-intro__visual.is-in {
+  transform: translate3d(0.75rem, -0.85rem, 0);
+}
+
+[dir="rtl"] .js-motion .about-media.hero-intro__visual.is-in {
+  transform: translate3d(-0.75rem, -0.85rem, 0);
+}
+
+/* ---------- Card interactions (site-wide, not gated on .js-motion) ---------- */
 @media (hover: hover) and (pointer: fine) {
-  .js-motion .card--interactive:hover,
-  .js-motion a.card:hover {
+  .card:hover,
+  .card--interactive:hover,
+  a.card:hover,
+  .stat-card:hover,
+  .portfolio-item:hover:not(.portfolio-item--logo),
+  .gallery-item:hover,
+  .process__step:hover,
+  .contact-channel:hover,
+  .accordion__item:hover,
+  .cred-list li:hover,
+  .chip-list li:hover,
+  .markets-list li:hover {
     transform: translate3d(0, var(--motion-hover-lift), 0) scale(var(--motion-hover-scale));
     box-shadow: var(--shadow-md);
-    border-color: rgba(237, 12, 101, 0.28);
   }
 
-  .js-motion .portfolio-item:hover,
-  .js-motion .gallery-item:hover,
-  .js-motion .stat-card:hover,
-  .js-motion .process__step:hover,
-  .js-motion .contact-channel:hover {
-    transform: translate3d(0, -4px, 0);
-    box-shadow: var(--shadow-sm);
+  .stat-card--plain:hover {
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
   }
 
-  .js-motion .card:not(.card--interactive):not(a):hover {
-    border-color: rgba(237, 12, 101, 0.18);
+  .cred-list li:hover {
+    background: var(--color-white);
+  }
+
+  .chip-list li:hover {
+    background: var(--color-fuchsia);
+    border-color: var(--color-fuchsia);
+    color: var(--color-white);
+  }
+
+  /* Keep white label text readable on fuchsia pills */
+  .markets-list li:hover {
+    background: var(--color-fuchsia-dark);
+    color: var(--color-white);
   }
 }
 
+.card:focus-visible,
 .card--interactive:focus-visible,
 a.card:focus-visible,
+.stat-card:focus-visible,
 .portfolio-item a:focus-visible,
 .gallery-item button:focus-visible,
 .contact-channel:focus-visible {
@@ -111,15 +186,22 @@ a.card:focus-visible,
 }
 
 .card,
+.card--interactive,
 .stat-card,
 .portfolio-item,
 .gallery-item,
 .process__step,
-.contact-channel {
+.contact-channel,
+.accordion__item,
+.cred-list li,
+.chip-list li,
+.markets-list li {
   transition:
     transform var(--motion-medium) var(--motion-ease-out),
     box-shadow var(--motion-medium) var(--motion-ease-out),
-    border-color var(--motion-medium) var(--motion-ease-out);
+    border-color var(--motion-medium) var(--motion-ease-out),
+    background-color var(--motion-medium) var(--motion-ease-out),
+    color var(--motion-medium) var(--motion-ease-out);
 }
 
 /* ---------- Tab / accordion micro-motion ---------- */
@@ -186,24 +268,20 @@ a.card:focus-visible,
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--color-fuchsia);
+  background: #fff7f9;
   opacity: 0;
 }
 
 .page-transition.is-active .page-transition__veil,
 .page-transition.is-booting .page-transition__veil {
   opacity: 1;
-  /* Instant cover so the 2s handwriting starts on solid brand color */
+  /* Instant cover so the 2s handwriting starts on the light screen */
   transition: none;
 }
 
 .page-transition.is-exiting .page-transition__veil {
   opacity: 0;
   transition: opacity var(--motion-transition) var(--motion-ease-out);
-}
-
-.page-transition--light .page-transition__veil {
-  background: #fff7f9;
 }
 
 .page-transition__logo-wrap {
@@ -262,9 +340,16 @@ a.card:focus-visible,
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   .js-motion .reveal.is-reveal-pending:not(.is-revealed),
-  .js-motion [data-reveal].is-reveal-pending:not(.is-revealed) {
+  .js-motion [data-reveal].is-reveal-pending:not(.is-revealed),
+  .js-motion .hero-intro__copy:not(.is-in),
+  .js-motion .hero-intro__visual:not(.is-in) {
     opacity: 1;
     transform: none;
+  }
+
+  .js-motion .hero-intro__copy,
+  .js-motion .hero-intro__visual {
+    transition: none !important;
   }
 
   .js-motion .reveal-stagger.is-revealed > *,
@@ -294,8 +379,27 @@ a.card:focus-visible,
   .process__step,
   .contact-channel,
   .card--interactive,
+  .accordion__item,
+  .cred-list li,
+  .chip-list li,
+  .markets-list li,
   .btn {
     transition: none !important;
+  }
+
+  .card:hover,
+  .card--interactive:hover,
+  a.card:hover,
+  .stat-card:hover,
+  .portfolio-item:hover,
+  .gallery-item:hover,
+  .process__step:hover,
+  .contact-channel:hover,
+  .accordion__item:hover,
+  .cred-list li:hover,
+  .chip-list li:hover,
+  .markets-list li:hover,
+  .expertise-areas__item:hover {
     transform: none !important;
   }
 }

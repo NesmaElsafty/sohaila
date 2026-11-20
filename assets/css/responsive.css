@@ -4,13 +4,34 @@
     gap: var(--space-5);
   }
 
+  .about-spread__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    align-items: start;
+  }
+
+  .about-spread__media {
+    position: static;
+    height: auto;
+    min-height: 0;
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+
+  .about-spread__media img {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
   .hero__media {
     order: -1;
     justify-items: center;
   }
 
   .hero__media img {
-    width: min(100%, 20rem);
+    width: min(100%, 26rem);
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -42,6 +63,10 @@
 
   .grid--4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-grid--logos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -132,13 +157,30 @@
     padding-block: clamp(2rem, 5vw, 3rem);
   }
 
-  .grid--2,
-  .grid--3,
-  .grid--4 {
+  .specialized__list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .specialized__media {
+    max-width: none;
+  }
+
+  .philosophy__statement {
     grid-template-columns: 1fr;
   }
 
-  .site-footer__grid {
+  .philosophy__principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .expertise-areas__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 {
     grid-template-columns: 1fr;
   }
 
@@ -147,20 +189,103 @@
     grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
   }
 
+  .portfolio-grid--logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .process__step {
     grid-template-columns: 1fr;
   }
 
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why__card {
+    min-height: 13rem;
+  }
+
+  .why__panel {
+    max-width: min(20rem, 85%);
+  }
+
+  .cta-close__layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .cta-close__media {
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+
+  .approach__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .approach__badge {
+    max-width: none;
+    justify-self: stretch;
+    border-radius: var(--radius-lg);
+  }
+
+  .approach__icon {
+    width: 4.25rem;
+  }
+
   .hero {
-    padding-block: calc(var(--header-h) + var(--space-5)) var(--space-6);
+    padding-block: var(--space-5);
   }
 
   .page-hero {
-    padding-block: calc(var(--header-h) + var(--space-5)) var(--space-5);
+    padding-block: var(--space-5);
+  }
+}
+
+@media (max-width: 560px) {
+  .philosophy__principles {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-areas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-areas__item {
+    grid-template-columns: auto 1fr;
+  }
+
+  #testimonials-gallery.gallery-grid--images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Keep philosophy readable on short laptop screens */
+@media (min-width: 961px) and (max-height: 820px) {
+  .philosophy.section {
+    padding-block: clamp(1.75rem, 3vh, 2.5rem);
+  }
+
+  .philosophy__frame {
+    gap: 0.85rem;
+  }
+
+  .philosophy__icon {
+    width: 2.6rem;
+  }
+
+  .philosophy__principle p {
+    font-size: 0.8rem;
+    line-height: 1.35;
   }
 }
 
 @media (max-width: 480px) {
+  .portfolio-grid--logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .btn-group {
     flex-direction: column;
   }

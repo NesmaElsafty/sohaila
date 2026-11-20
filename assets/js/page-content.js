@@ -33,11 +33,23 @@
 
     philosophyTitle: "My Strategic Philosophy",
     philosophyLead: "Strategy Before Execution. Value Before Visibility. Growth Beyond Campaigns.",
+    philosophyLeadA: "Strategy Before Execution. Value Before Visibility.",
+    philosophyLeadB: "Growth Beyond Campaigns.",
     philosophyDescShort:
       "My approach is built around four principles: Business First; Positioning Creates Advantage; Products Drive Revenue; Strategy Must Translate Into Action.",
 
     expertiseTitle: "Strategic Expertise",
     expertiseLead: "From Strategy to Sustainable Business Growth.",
+    expertiseLeadA: "From Strategy to",
+    expertiseLeadB: "Sustainable Business Growth.",
+    whoLeadA: "Different Business Models. Different Challenges.",
+    whoLeadB: "One Strategic Mindset.",
+    specializedLeadA: "Different Business Models.",
+    specializedLeadB: "Tailored Growth Strategies.",
+    approachLeadA: "From Business Challenges to",
+    approachLeadB: "Measurable Growth.",
+    approachLineA: "MY APPROACH: Business-Driven. Customer-Centric.",
+    approachLineB: "Results-Focused.",
     expertiseAreas: {
       brand: {
         title: "Brand Strategy & Positioning",
@@ -113,7 +125,7 @@
 
     footerBrandTitle: "Brand, Marketing & Business Growth Strategist",
     footerTagline: "Building Brands. Shaping Strategies. Driving Growth.",
-    footerCredit: "SOHAILA HALIM Branding Portfolio 2026",
+    footerCredit: "© 2026 Sohaila Halim",
     brandStrategistShort: "Brand Strategist",
   };
 
@@ -136,11 +148,23 @@
 
     philosophyTitle: "فلسفتي الاستراتيجية",
     philosophyLead: "الاستراتيجية قبل التنفيذ. القيمة قبل الظهور. نموٌّ يتجاوز الحملات.",
+    philosophyLeadA: "الاستراتيجية قبل التنفيذ. القيمة قبل الظهور.",
+    philosophyLeadB: "نموٌّ يتجاوز الحملات.",
     philosophyDescShort:
       "يرتكز نهجي على أربعة مبادئ: الأعمال أولاً؛ التموضع يصنع الميزة؛ المنتجات تقود الإيرادات؛ والاستراتيجية يجب أن تتحول إلى فعل.",
 
     expertiseTitle: "الخبرات الاستراتيجية",
     expertiseLead: "من الاستراتيجية إلى نمو مستدام للأعمال.",
+    expertiseLeadA: "من الاستراتيجية إلى",
+    expertiseLeadB: "نمو مستدام للأعمال.",
+    whoLeadA: "نماذج أعمال مختلفة. تحديات مختلفة.",
+    whoLeadB: "عقلية استراتيجية واحدة.",
+    specializedLeadA: "نماذج أعمال مختلفة.",
+    specializedLeadB: "استراتيجيات نمو مصمّمة خصيصاً.",
+    approachLeadA: "من تحديات الأعمال إلى",
+    approachLeadB: "نمو قابل للقياس.",
+    approachLineA: "منهجي: قائم على الأعمال. محوره العميل.",
+    approachLineB: "موجَّه نحو النتائج.",
     expertiseAreas: {
       brand: {
         title: "استراتيجية العلامة التجارية والتموضع",
@@ -216,7 +240,7 @@
 
     footerBrandTitle: "خبيرة استراتيجيات العلامة التجارية والتسويق ونمو الأعمال",
     footerTagline: "بناء العلامات التجارية. صياغة الاستراتيجيات. قيادة النمو.",
-    footerCredit: "SOHAILA HALIM — ملف أعمال العلامات التجارية 2026",
+    footerCredit: "© 2026 Sohaila Halim",
     brandStrategistShort: "خبيرة استراتيجيات العلامة التجارية",
   };
 
@@ -244,14 +268,42 @@
         projectsLabel: sharedEn.projectsLabel,
       },
       philosophy: {
-        eyebrow: sharedEn.expertiseEyebrow,
         title: sharedEn.philosophyTitle,
         lead: sharedEn.philosophyLead,
-        desc: sharedEn.philosophyDescShort,
+        leadA: sharedEn.philosophyLeadA,
+        leadB: sharedEn.philosophyLeadB,
+        quote:
+          "I believe that successful brands are not built through visibility alone, and sustainable business growth cannot depend on marketing campaigns in isolation.",
+        align:
+          "Real growth requires alignment between the business model, brand positioning, product value, customer needs, and marketing execution.",
+        intro: "My approach is built around four principles:",
+        focus:
+          "My focus is not simply on helping brands become more visible, but on helping businesses become more competitive, commercially relevant, and positioned for long-term growth.",
+        principles: {
+          businessFirst: {
+            title: "Business First",
+            text: "Every strategy begins with understanding the business model, commercial objectives, market dynamics, and growth challenges.",
+          },
+          positioning: {
+            title: "Positioning Creates Advantage",
+            text: "A strong competitive position helps brands communicate their value, attract the right customers, and compete beyond price.",
+          },
+          products: {
+            title: "Products Drive Revenue",
+            text: "Marketing can create demand, but sustainable revenue depends on relevant products, compelling offers, and well-designed customer journeys.",
+          },
+          strategy: {
+            title: "Strategy Must Translate Into Action",
+            text: "A strategy creates value when it guides decisions, aligns teams, and connects execution with measurable business objectives.",
+          },
+        },
       },
       expertise: {
         title: sharedEn.expertiseTitle,
         lead: sharedEn.expertiseLead,
+        leadA: sharedEn.expertiseLeadA,
+        leadB: sharedEn.expertiseLeadB,
+        desc: "I help businesses and personal brands strengthen their market position, develop competitive offerings, and build marketing strategies that drive measurable business growth.",
         areas: sharedEn.expertiseAreas,
       },
       impact: {
@@ -260,8 +312,11 @@
         cards: sharedEn.impactCards,
       },
       portfolio: {
-        title: "CLIENT PORTFOLIO",
+        title: "Our Clients",
         lead: "Strategic Partnerships Across Personal Brands & Businesses.",
+        leadPrefix: "Strategic Partnerships Across",
+        leadBrand: "Personal Brands",
+        leadBusiness: "Businesses.",
       },
       results: {
         title: "Selected Success Stories",
@@ -280,6 +335,9 @@
       cta: {
         title: sharedEn.ctaTitle,
         lead: sharedEn.ctaLead,
+        desc: "Whether you're building a brand, developing a new offer, entering a new market, or scaling an established business, let's explore how strategic thinking can unlock your next growth opportunity.",
+        invite: "Let's Discuss Your Business Growth.",
+        role: "Brand, Marketing & Business Growth Strategist",
       },
     },
 
@@ -520,11 +578,11 @@
     },
 
     portfolio: {
-      docTitle: "Client Portfolio — Sohaila Halim",
+      docTitle: "Our Clients — Sohaila Halim",
       metaDescription:
         "Client portfolio across personal brands, corporate brands, care & beauty, healthcare, real estate, government, and startups.",
-      eyebrow: "Portfolio",
-      title: "CLIENT PORTFOLIO",
+      eyebrow: "Our Clients",
+      title: "Our Clients",
       lead: "Strategic Partnerships Across Personal Brands & Businesses.",
       filterAria: "Portfolio filters",
       personal: {
@@ -595,8 +653,8 @@
       evidence: {
         title: "Results Evidence Gallery",
         desc: "Original results screenshots from the portfolio (pages 16–18). Click to enlarge.",
-        captionPattern: "Results evidence {n}",
-        altPattern: "Results evidence screenshot {n} from original portfolio",
+        captionPattern: "",
+        altPattern: "",
       },
     },
 
@@ -606,8 +664,8 @@
       eyebrow: "Testimonials",
       title: "Testimonials",
       desc: "Original testimonial screenshots preserved from the portfolio (pages 19–25). No transcript text has been invented. Click any image to enlarge.",
-      captionPattern: "Testimonial {n}",
-      altPattern: "Original testimonial screenshot {n} (portfolio page {page})",
+      captionPattern: "",
+      altPattern: "",
     },
 
     contact: {
@@ -651,14 +709,42 @@
         projectsLabel: sharedAr.projectsLabel,
       },
       philosophy: {
-        eyebrow: sharedAr.expertiseEyebrow,
         title: sharedAr.philosophyTitle,
         lead: sharedAr.philosophyLead,
-        desc: sharedAr.philosophyDescShort,
+        leadA: sharedAr.philosophyLeadA,
+        leadB: sharedAr.philosophyLeadB,
+        quote:
+          "أؤمن بأن العلامات التجارية الناجحة لا تُبنى بالظهور وحده، وبأن النمو المستدام للأعمال لا يمكن أن يعتمد على الحملات التسويقية بمعزل عن غيرها.",
+        align:
+          "يتطلب النمو الحقيقي مواءمة بين نموذج الأعمال وتموضع العلامة التجارية وقيمة المنتج واحتياجات العملاء والتنفيذ التسويقي.",
+        intro: "يرتكز نهجي على أربعة مبادئ:",
+        focus:
+          "لا يقتصر تركيزي على مساعدة العلامات التجارية على زيادة ظهورها، بل على مساعدة الشركات لتصبح أكثر قدرة على المنافسة وأكثر صلة بالسوق من الناحية التجارية، ومهيّأة للنمو طويل الأجل.",
+        principles: {
+          businessFirst: {
+            title: "الأعمال أولاً",
+            text: "تبدأ كل استراتيجية بفهم نموذج الأعمال والأهداف التجارية وديناميكيات السوق وتحديات النمو.",
+          },
+          positioning: {
+            title: "التموضع يصنع الميزة",
+            text: "يساعد الموقع التنافسي القوي العلامات التجارية على إيصال قيمتها وجذب العملاء المناسبين والمنافسة بما يتجاوز السعر.",
+          },
+          products: {
+            title: "المنتجات تقود الإيرادات",
+            text: "يستطيع التسويق خلق الطلب، لكن الإيرادات المستدامة تعتمد على منتجات ملائمة وعروض مقنعة ورحلات عملاء مصمّمة بإتقان.",
+          },
+          strategy: {
+            title: "الاستراتيجية يجب أن تتحول إلى فعل",
+            text: "تصنع الاستراتيجية قيمة حين توجّه القرارات، وتوحّد الفرق، وتربط التنفيذ بأهداف أعمال قابلة للقياس.",
+          },
+        },
       },
       expertise: {
         title: sharedAr.expertiseTitle,
         lead: sharedAr.expertiseLead,
+        leadA: sharedAr.expertiseLeadA,
+        leadB: sharedAr.expertiseLeadB,
+        desc: "أساعد الشركات والعلامات الشخصية على تعزيز مكانتها في السوق، وتطوير عروض تنافسية، وبناء استراتيجيات تسويق تقود نمواً قابلاً للقياس في الأعمال.",
         areas: sharedAr.expertiseAreas,
       },
       impact: {
@@ -667,8 +753,11 @@
         cards: sharedAr.impactCards,
       },
       portfolio: {
-        title: "محفظة العملاء",
+        title: "عملاؤنا",
         lead: "شراكات استراتيجية مع العلامات الشخصية والشركات.",
+        leadPrefix: "شراكات استراتيجية مع",
+        leadBrand: "العلامات الشخصية",
+        leadBusiness: "الشركات.",
       },
       results: {
         title: "قصص نجاح مختارة",
@@ -687,6 +776,9 @@
       cta: {
         title: sharedAr.ctaTitle,
         lead: sharedAr.ctaLead,
+        desc: "سواء كنتِ تبنين علامة تجارية، أو تطوّرين عرضاً جديداً، أو تدخلين سوقاً جديداً، أو توسّعين عملاً قائماً — دعينا نستكشف كيف يفتح التفكير الاستراتيجي فرصة نموك التالية.",
+        invite: "لنناقش نمو أعمالك.",
+        role: "خبيرة استراتيجيات العلامة التجارية والتسويق ونمو الأعمال",
       },
     },
 
@@ -927,13 +1019,13 @@
     },
 
     portfolio: {
-      docTitle: "محفظة العملاء — Sohaila Halim",
+      docTitle: "عملاؤنا — Sohaila Halim",
       metaDescription:
         "محفظة العملاء عبر العلامات الشخصية والعلامات المؤسسية والعناية والجمال والرعاية الصحية والعقارات والجهات الحكومية والشركات الناشئة.",
-      eyebrow: "المحفظة",
-      title: "محفظة العملاء",
+      eyebrow: "عملاؤنا",
+      title: "عملاؤنا",
       lead: "شراكات استراتيجية مع العلامات الشخصية والشركات.",
-      filterAria: "مرشحات المحفظة",
+      filterAria: "مرشحات العملاء",
       personal: {
         title: "العلامات الشخصية والأعمال عالية القيمة",
         taglineHtml:
@@ -1002,8 +1094,8 @@
       evidence: {
         title: "معرض أدلة النتائج",
         desc: "لقطات شاشة أصلية للنتائج من ملف الأعمال (الصفحات 16–18). انقر للتكبير.",
-        captionPattern: "دليل النتائج {n}",
-        altPattern: "لقطة شاشة لدليل النتائج {n} من ملف الأعمال الأصلي",
+        captionPattern: "",
+        altPattern: "",
       },
     },
 
@@ -1013,8 +1105,8 @@
       eyebrow: "الشهادات",
       title: "الشهادات",
       desc: "لقطات شاشة أصلية للشهادات محفوظة من ملف الأعمال (الصفحات 19–25). لم تتم إضافة أي نصوص مختلقة. انقر على أي صورة للتكبير.",
-      captionPattern: "شهادة {n}",
-      altPattern: "لقطة شاشة أصلية لشهادة {n} (صفحة {page} من ملف الأعمال)",
+      captionPattern: "",
+      altPattern: "",
     },
 
     contact: {

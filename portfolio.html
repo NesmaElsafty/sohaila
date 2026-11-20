@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Client Portfolio — Sohaila Halim</title>
+  <title>Our Clients </title>
   <meta name="description" content="Client portfolio across personal brands, corporate brands, care & beauty, healthcare, real estate, government, and startups." />
-  <meta property="og:title" content="Client Portfolio — Sohaila Halim" />
+  <meta property="og:title" content="Our Clients " />
   <meta property="og:image" content="assets/images/hero/sohaila-hero.png" />
   <link rel="icon" href="assets/images/brand/logo-dark.png" />
   <link rel="stylesheet" href="assets/css/variables.css" />
@@ -27,8 +27,8 @@
   <main id="main" class="site-main">
     <section class="page-hero">
       <div class="container" data-source-content>
-        <p class="section__eyebrow">Portfolio</p>
-        <h1 class="page-hero__title section__title--lime">CLIENT PORTFOLIO</h1>
+        <!-- <p class="section__eyebrow">Our Clients</p> -->
+        <h1 class="page-hero__title section__title--fuchsia">Our Clients</h1>
         <p class="section__lead">Strategic Partnerships Across Personal Brands &amp; Businesses.</p>
       </div>
     </section>
@@ -61,9 +61,8 @@
           <button type="button" class="filter-btn" data-filter="startups" data-i18n="portfolio.startups" aria-pressed="false">Startups</button>
         </div>
 
-        <div class="portfolio-grid" id="portfolio-grid" data-filter-grid data-source-content></div>
+        <div class="portfolio-grid portfolio-grid--logos" id="portfolio-grid" data-filter-grid data-source-content></div>
         <p class="empty-state" id="portfolio-empty" data-filter-empty hidden data-i18n="common.emptyFilter">No items match this filter.</p>
-        <p class="text-muted" style="margin-top:1.5rem;font-size:var(--fs-sm)" data-source-content>Click on the image to be redirected to the page. (Where a verified Instagram link exists.)</p>
       </div>
     </section>
   </main>
@@ -113,7 +112,7 @@
 
         if (c.url) {
           return (
-            '<article class="portfolio-item" data-category="' +
+            '<article class="portfolio-item portfolio-item--logo" data-category="' +
             category +
             '"><a class="portfolio-item__link" href="' +
             escapeHtml(c.url) +
@@ -122,7 +121,13 @@
             "</a></article>"
           );
         }
-        return '<article class="portfolio-item" data-category="' + category + '">' + media + "</article>";
+        return (
+          '<article class="portfolio-item portfolio-item--logo" data-category="' +
+          category +
+          '">' +
+          media +
+          "</article>"
+        );
       }).join("");
 
       if (window.SohailaFilters) window.SohailaFilters.initAll();

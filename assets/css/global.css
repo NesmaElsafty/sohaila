@@ -12,6 +12,10 @@ html {
   overflow-x: clip;
 }
 
+body {
+  padding-top: var(--header-h);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -24,6 +28,24 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+::selection {
+  background: var(--color-fuchsia);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background: var(--color-fuchsia);
+  color: var(--color-white);
+}
+
+.section--fuchsia ::selection,
+.section--fuchsia ::-moz-selection,
+.cta-band ::selection,
+.cta-band ::-moz-selection {
+  background: var(--color-white);
+  color: var(--color-fuchsia);
 }
 
 body {
@@ -192,6 +214,16 @@ body.lightbox-open {
   color: var(--color-fuchsia);
 }
 
+.section__title--fuchsia::after {
+  content: "";
+  display: block;
+  width: min(5.5rem, 28%);
+  height: 3px;
+  margin-top: var(--space-3);
+  margin-inline-end: auto;
+  background: var(--color-lime);
+}
+
 .section__lead {
   font-size: var(--fs-md);
   font-weight: var(--fw-semibold);
@@ -199,6 +231,15 @@ body.lightbox-open {
   max-width: 48rem;
   margin-bottom: var(--space-5);
 }
+
+.section__lead .part-a {
+  color: var(--color-lime);
+}
+
+.section__lead .part-b {
+  color: var(--color-fuchsia);
+}
+
 
 .section__desc {
   max-width: 52rem;
@@ -240,7 +281,7 @@ body.lightbox-open {
 }
 
 .page-hero {
-  padding-block: calc(var(--header-h) + var(--space-5)) clamp(1.75rem, 3vw, 2.75rem);
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.75rem);
   background:
     radial-gradient(ellipse 60% 50% at 90% 20%, var(--color-blush) 0%, transparent 70%),
     var(--color-white);
@@ -248,6 +289,16 @@ body.lightbox-open {
 
 .page-hero__title {
   color: var(--color-fuchsia);
+}
+
+.page-hero__title::after {
+  content: "";
+  display: block;
+  width: min(8rem, 36%);
+  height: 3px;
+  margin-top: var(--space-3);
+  margin-inline-end: auto;
+  background: var(--color-lime);
 }
 
 .grid {
